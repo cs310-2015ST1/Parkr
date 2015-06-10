@@ -1,0 +1,13 @@
+class ParkingMeter
+  def initialize(id, name, headType, limit, rate, credit, payByPhone, inEffect, coord)
+    @pm_id=id
+    @pm_name = name
+    @pm_headType=headType
+    @pm_limit=limit
+    @pm_rate=rate
+    @pm_credit=credit
+    @pm_payByPhone=payByPhone
+    @pm_inEffect=inEffect
+    @pm_coord = coord
+  end
+end
