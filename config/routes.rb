@@ -1,9 +1,14 @@
 Rails.application.routes.draw do
+  resources :parking_meters
+  get 'unzipper/unzip'
+
+  get 'meter_parser/parse'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'home#homedisplay'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -21,6 +26,7 @@ Rails.application.routes.draw do
   #       post 'toggle'
   #     end
   #
+
   #     collection do
   #       get 'sold'
   #     end
