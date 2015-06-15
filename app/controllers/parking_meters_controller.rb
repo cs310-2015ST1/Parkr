@@ -5,6 +5,13 @@ class ParkingMetersController < ApplicationController
   # GET /parking_meters.json
   def index
     @parking_meters = ParkingMeter.all
+    @hash = Gmaps4rails.build_markers(@parking_meters) do |pm, marker|
+      @pm = pm
+      marker.infowindow render_to_string(:partial =>"/parking_meters/infowindow", :locals => {:pm => pm})
+      marker.title pm.name
+      marker.lat pm.lat
+      marker.lng pm.lng
+    end
   end
 
   # GET /parking_meters/1
@@ -71,4 +78,5 @@ class ParkingMetersController < ApplicationController
     def parking_meter_params
       params.require(:parking_meter).permit(:name, :head_type, :time_limit, :rate, :credit, :pay_by_phone, :in_effect, :lat, :lng)
     end
+
 end

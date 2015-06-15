@@ -18,7 +18,6 @@ ActiveRecord::Schema.define(version: 20150614211419) do
     t.string   "head_type"
     t.string   "time_limit"
     t.string   "rate"
-    t.string   "credit"
     t.string   "pay_by_phone"
     t.string   "in_effect"
     t.float    "lat"
