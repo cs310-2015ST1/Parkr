@@ -20,10 +20,10 @@ data.css("Placemark").each do |placeMark|
   pm.head_type = /(Single|Twin)/.match(placeMark.at('description'))
   pm.time_limit = /[0-9]\sHr/.match(placeMark.at('description'))
   pm.rate = /(\$[0-9]*\.[0-9]*)/.match(placeMark.at('description'))
-  pm.credit = /CRE(\w*)/.match(placeMark.at('description'))
   pm.pay_by_phone = /[0-9]+/.match(placeMark.at('name'))
   lat = /(49\.\d+)/.match(placeMark.at('coordinates'))
   lng = /(-123\.\d+)/.match(placeMark.at('coordinates'))
+
 
   if lat!=nil
     pm.lat = lat[0]
