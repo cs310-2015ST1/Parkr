@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'open-uri'
-require 'zip/zip'
+#require 'rubyzip'
 
 zip_file = open("http://data.vancouver.ca/download/kml/parking_meter_rates_and_time_limits.kmz")
 source_path = "/Users/mackenziesampson1/RubymineProjects/Parkr/app/assets/sources"
