@@ -7,12 +7,16 @@ class ParkingMetersController < ApplicationController
     @parking_meters = ParkingMeter.all
     @hash = Gmaps4rails.build_markers(@parking_meters) do |pm, marker|
       @pm = pm
-      marker.infowindow render_to_string(:partial =>"/parking_meters/infowindow", :locals => {:pm => pm})
-      marker.title pm.name
+      marker.infowindow "<p>Rate: #{pm.rate}<br>
+Time Limit: #{pm.time_limit}<br>
+Type: #{pm.head_type}<br>
+Pay By Phone: #{pm.pay_by_phone}<br>
+In Effect: #{pm.in_effect}</p>"
       marker.lat pm.lat
       marker.lng pm.lng
     end
   end
+
 
   # GET /parking_meters/1
   # GET /parking_meters/1.json

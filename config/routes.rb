@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :crimes
   resources :parking_meters
   get 'unzipper/unzip'
 
@@ -8,7 +9,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'parking_meters#index'
+  root 'home#homedisplay'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

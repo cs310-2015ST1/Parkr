@@ -5,6 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+# Opens local KML file, parses it, and loads info into database
+
 require 'nokogiri'
 
 file = File.open("/Users/mackenziesampson1/RubymineProjects/Parkr/app/assets/sources/parking_meter_rates_and_time_limits.kml")
@@ -46,3 +49,27 @@ data.css("Placemark").each do |placeMark|
   end
 
 end
+
+=begin
+require 'csv'
+require 'roo'
+
+csv_file = File.read("/Users/mackenziesampson1/Downloads/crime_2014.xls")
+csv = Roo::Spreadsheet.open(csv_file)
+csv.to_csv
+ #do |row|
+ #puts row.inspect
+
+  if row[0].includes? "Auto"
+    crime = Crime.new
+    address << row[3]
+    crime.address = address
+    crime.save!
+    if crime.save
+      puts "Success"
+    else
+      puts "Didn't work"
+    end
+  end
+=end
+#end
