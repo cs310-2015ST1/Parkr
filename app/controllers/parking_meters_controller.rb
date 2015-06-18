@@ -4,7 +4,19 @@ class ParkingMetersController < ApplicationController
   # GET /parking_meters
   # GET /parking_meters.json
   def index
+=begin
+    if params[:location].present?
+      geocode = Geokit::Geocoders::MultiGeocoder.geocode("#{params[:location]}")
+      a = Geokit::Geocoders::MultiGeocoder.geocode("140 Market St, San Francisco, CA")
+      puts a
+      scoped  = ParkingMeter.within(params[:distance], :origin => geocode)
+      @parking_meters = scoped.all
+     # @parking_meters = ParkingMeter.nearbys(geocode, params[:distance], :units => :km)
+
+    else
+=end
     @parking_meters = ParkingMeter.all
+    #end
     @hash = Gmaps4rails.build_markers(@parking_meters) do |pm, marker|
       @pm = pm
       marker.infowindow "<p>Rate: #{pm.rate}<br>
@@ -14,8 +26,9 @@ Pay By Phone: #{pm.pay_by_phone}<br>
 In Effect: #{pm.in_effect}</p>"
       marker.lat pm.lat
       marker.lng pm.lng
+      end
     end
-  end
+
 
 
   # GET /parking_meters/1

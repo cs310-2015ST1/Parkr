@@ -2,7 +2,6 @@ Rails.application.routes.draw do
   resources :crimes
   resources :parking_meters
   get 'unzipper/unzip'
-
   get 'meter_parser/parse'
 
   # The priority is based upon order of creation: first created -> highest priority.

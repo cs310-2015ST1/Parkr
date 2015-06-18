@@ -27,6 +27,7 @@ gem 'sdoc', group: :doc
 # gem 'bcrypt', '~> 3.1.7'
 gem 'geocoder'
 gem 'gmaps4rails'
+gem 'geokit-rails'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
