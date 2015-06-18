@@ -12,6 +12,9 @@ class CrimesController < ApplicationController
   def show
   end
 
+  def heat_maps
+  end
+
   # GET /crimes/new
   def new
     @crime = Crime.new
