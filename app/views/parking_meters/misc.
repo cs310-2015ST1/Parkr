@@ -2,9 +2,12 @@
 <p id="notice"><%= notice %></p>
 <h1>Listing Parking Meters</h1>
 
+
+
 <table>
     <thead>
     <tr>
+
         <th>Name</th>
         <th>Head type</th>
         <th>Time limit</th>
