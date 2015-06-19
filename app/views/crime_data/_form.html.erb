@@ -1,0 +1,25 @@
+<%= form_for(@crime_datum) do |f| %>
+  <% if @crime_datum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@crime_datum.errors.count, "error") %> prohibited this crime_datum from being saved:</h2>
+
+      <ul>
+      <% @crime_datum.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :lat %><br>
+    <%= f.text_field :lat %>
+  </div>
+  <div class="field">
+    <%= f.label :lon %><br>
+    <%= f.text_field :lon %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

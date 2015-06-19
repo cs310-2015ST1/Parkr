@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Lat:</strong>
+  <%= @crime_datum.lat %>
+</p>
+
+<p>
+  <strong>Lon:</strong>
+  <%= @crime_datum.lon %>
+</p>
+
+<%= link_to 'Edit', edit_crime_datum_path(@crime_datum) %> |
+<%= link_to 'Back', crime_data_path %>
