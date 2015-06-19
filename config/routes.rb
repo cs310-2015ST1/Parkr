@@ -3,9 +3,6 @@ Rails.application.routes.draw do
   resources :parking_meters
   get 'unzipper/unzip'
   get 'meter_parser/parse'
-
-  
-
   get 'crimes/index' => 'heat_map'
 
 
