@@ -1,3 +1,4 @@
+=begin
 require 'openssl'
 require 'csv'
 require 'open-uri'
@@ -53,3 +54,4 @@ CSV.read("/Users/ClaireHS//Parkr/app/assets/sources/crime_2014.csv") do |row|
 
 end
 
+=end
