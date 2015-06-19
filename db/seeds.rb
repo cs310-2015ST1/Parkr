@@ -91,7 +91,7 @@ csv.each do |row|
 
   addresses.each do |address|
     location = Geocoder.coordinates(address)
-    if /49\.\d*/.match(location[0]) && /-123\.\d*/.match(location[1])
+    if /49\.\d*/.match(location[0].to_s) && /-123\.\d*/.match(location[1].to_s)
       crime = CrimeDatum.new
       crime.lat = location[0]
       crime.lon = location[1]
