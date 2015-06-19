@@ -1,7 +1,11 @@
+=begin
 require 'openssl'
 require 'csv'
 require 'open-uri'
 require 'geokit-rails'
+
+
+
 
 
 
@@ -10,6 +14,8 @@ open("ftp://webftp.vancouver.ca/opendata/csv/crime_2014.csv") do |ftp|
   open("/Users/ClaireHS//Parkr/app/assets/sources/crime_2014.csv", 'w') do |file|
     file.write(ftp.read)
   end
+
+
 
 end
 
@@ -47,3 +53,5 @@ CSV.read("/Users/ClaireHS//Parkr/app/assets/sources/crime_2014.csv") do |row|
   end
 
 end
+
+=end
