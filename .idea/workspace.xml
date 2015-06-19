@@ -38,12 +38,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="parking_meters_controller.rb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="parking_meters_controller.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/parking_meters_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
-              <folding />
+            <state vertical-scroll-proportion="0.55851066">
+              <caret line="25" column="7" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
+              <folding>
+                <marker date="1434728310000" expanded="true" signature="195:3059" placeholder=" ... end" />
+                <marker date="1434728310000" expanded="true" signature="202:1091" placeholder="if ... end" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -98,10 +101,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="crime_parser.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="crime_parser.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/crime_parser.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5984042">
+            <state vertical-scroll-proportion="0.0">
               <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
               <folding />
             </state>
@@ -178,8 +181,8 @@
         <option value="$PROJECT_DIR$/app/views/parking_meters/index.html.erb" />
         <option value="$PROJECT_DIR$/app/models/unzipper.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/parking_meters_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/crime_parser.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/parking_meters_controller.rb" />
       </list>
     </option>
   </component>
@@ -1079,6 +1082,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/unzipper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/crime_parser.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/parking_meters/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.875">
@@ -1092,25 +1111,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/parking_meters_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/unzipper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/crime_parser.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5984042">
-          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-          <folding />
+        <state vertical-scroll-proportion="0.55851066">
+          <caret line="25" column="7" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
+          <folding>
+            <marker date="1434728310000" expanded="true" signature="195:3059" placeholder=" ... end" />
+            <marker date="1434728310000" expanded="true" signature="202:1091" placeholder="if ... end" />
+          </folding>
         </state>
       </provider>
     </entry>
