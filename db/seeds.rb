@@ -9,7 +9,7 @@
 
 require 'nokogiri'
 
-file = File.open("~/app/assets/sources/parking_meter_rates_and_time_limits.kml")
+file = File.open(File.expand_path('app/assets/sources/parking_meter_rates_and_time_limits.kml'))
 data = Nokogiri::XML(file)
 
 data.css("Placemark").each do |placeMark|

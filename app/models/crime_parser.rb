@@ -11,7 +11,7 @@ require 'geokit-rails'
 
 #open csv and save locally
 open("ftp://webftp.vancouver.ca/opendata/csv/crime_2014.csv") do |ftp|
-  open("/Users/ClaireHS//Parkr/app/assets/sources/crime_2014.csv", 'w') do |file|
+  open(File.expand_path('app/assets/sources/crime_2014.csv'), 'w') do |file|
     file.write(ftp.read)
   end
 
