@@ -14,10 +14,12 @@
 
     <%= submit_tag "Search" %>
 <% end %>
+  <br>
+  <%= link_to 'Crimes', crime_data_path, data: { no_turbolink: true } %>
 </center>
 <br>
 <div style='width: 100%;'>
-  <div id="map" style='width: 100%; height: 500px;'></div>
+  <div id="map" style='width: 100%; height: 430px;'></div>
 </div>
 <script type="text/javascript">
     handler = Gmaps.build('Google');

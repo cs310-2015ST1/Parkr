@@ -5,6 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+=begin
 
 
 require 'nokogiri'
@@ -46,24 +47,34 @@ data.css("Placemark").each do |placeMark|
     puts "Parking meter didn't save"
   end
 end
+=end
 
-
-
-=begin
 
 require 'openssl'
 require 'csv'
 require 'open-uri'
 require 'geokit-rails'
 
+
+
+
+file = File.expand_path('app/assets/sources/crime_2014.csv')
+=begin
+#open csv and save locally
+open("ftp://webftp.vancouver.ca/opendata/csv/crime_2014.csv") do |ftp|
+  open(file, 'w') do |file|
+    file.write(ftp.read)
+  end
+end
+=end
+
 addresses = Array.new
 
-CSV.read("/Users/mackenziesampson1/RubymineProjects/Parkr/app/assets/sources/crime_2014.csv") do |row|
-
+csv_text = File.read(file)
+csv = CSV.parse(csv_text, :headers => true)
+csv.each do |row|
   #save addresses to an array
-
-  if row[0].contains? 'Auto'
-    puts row[3]
+  if /\w*Auto\w*/.match(row[0])
     addresses<< row[3]
   end
 
@@ -71,20 +82,22 @@ CSV.read("/Users/mackenziesampson1/RubymineProjects/Parkr/app/assets/sources/cri
 
   if addresses != nil
     addresses.each do |address|
-      if address.contains? 'xx'
-        address.sub! 'xx', '00'
+      if /\w*XX\w*/.match(address)
+        address.sub!('XX', '00')
       end
     end
   end
 
 
   addresses.each do |address|
-    location = Geokit::Geocoder::GoogleGeocoder.geocode(address)
-    if location.success
-      crime = CrimeDatum.new(location.lat, location.lng)
+    location = Geocoder.coordinates(address)
+    if /49\.\d*/.match(location[0]) && /-123\.\d*/.match(location[1])
+      crime = CrimeDatum.new
+      crime.lat = location[0]
+      crime.lon = location[1]
       crime.save!
-      puts "Crime Success"
-    elsif !location.success
+      puts "Crime success"
+    else
       puts "crime save not successful"
     end
 
@@ -92,4 +105,4 @@ CSV.read("/Users/mackenziesampson1/RubymineProjects/Parkr/app/assets/sources/cri
 
 end
 
-=end
+

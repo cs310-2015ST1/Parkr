@@ -1,16 +1,16 @@
 Rails.application.routes.draw do
-  resources :crimes
   resources :parking_meters
+  resources :crime_data
   get 'unzipper/unzip'
   get 'meter_parser/parse'
-  get 'crimes/index' => 'heat_map'
+  get 'crime_data/index' => 'heat_map'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'parking_meters#index'
+  root 'crime_data#index'
 
 
   # Example of regular route:

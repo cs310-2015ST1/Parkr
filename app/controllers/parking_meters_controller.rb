@@ -15,6 +15,9 @@ class ParkingMetersController < ApplicationController
 
       if @parking_meters.first===nil
         @location = Geocoder.coordinates(params[:location])
+        if @location === nil
+          @location = [49.2827, -123.1207]
+        end
       else
         @pmlat = @parking_meters.first.lat
         @pmlng = @parking_meters.first.lng

@@ -1,4 +1,3 @@
-=begin
 require 'openssl'
 require 'csv'
 require 'open-uri'
@@ -7,11 +6,11 @@ require 'geokit-rails'
 
 
 
-
+file = File.expand_path('app/assets/sources/crime_2014.csv')
 
 #open csv and save locally
 open("ftp://webftp.vancouver.ca/opendata/csv/crime_2014.csv") do |ftp|
-  open(File.expand_path('app/assets/sources/crime_2014.csv'), 'w') do |file|
+  open(file, 'w') do |file|
     file.write(ftp.read)
   end
 
@@ -22,7 +21,7 @@ end
 
 addresses = Array.new
 
-CSV.read("/Users/ClaireHS//Parkr/app/assets/sources/crime_2014.csv") do |row|
+CSV.read(file) do |row|
 
   #save addresses to an array
 
@@ -54,4 +53,3 @@ CSV.read("/Users/ClaireHS//Parkr/app/assets/sources/crime_2014.csv") do |row|
 
 end
 
-=end

@@ -5,6 +5,7 @@ class CrimeDataController < ApplicationController
   # GET /crime_data.json
   def index
     @crime_data = CrimeDatum.all
+    @crime_array = Array.new
   end
 
   # GET /crime_data/1
