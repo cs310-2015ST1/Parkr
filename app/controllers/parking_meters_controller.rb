@@ -7,7 +7,7 @@ class ParkingMetersController < ApplicationController
 
 
     if params[:location].present?
-      @location = Geocoder.coordinates(params[:location])
+
       @parking_meters  = ParkingMeter.near(params[:location], params[:distance])
 
     else
@@ -16,6 +16,13 @@ class ParkingMetersController < ApplicationController
 
     end
 
+    if @parking_meters.first===nil
+      @location = Geocoder.coordinates(params[:location])
+    else
+      @pmlat = @parking_meters.first.lat
+      @pmlng = @parking_meters.first.lng
+      @location = [@pmlat,@pmlng]
+    end
     @hash = Gmaps4rails.build_markers(@parking_meters) do |pm, marker|
       @pm = pm
       marker.infowindow "<p>Rate: #{pm.rate}<br>
