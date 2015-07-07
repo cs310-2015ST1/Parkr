@@ -1,0 +1,8 @@
+<Placemark id="test">
+<name>65192</name>
+<description>&lt;br&gt;Meter Head Type: Single&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $3.00&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 65192</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_7</styleUrl>
+<Point>
+<coordinates>-123.106670480264,30.2834540339571,0 </coordinates>
+</Point>
+</Placemark>

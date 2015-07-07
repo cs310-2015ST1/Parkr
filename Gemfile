@@ -30,7 +30,8 @@ gem 'gmaps4rails'
 gem 'geokit-rails'
 # Use Unicorn as the app server
 # gem 'unicorn'
-
+gem 'omniauth'
+gem 'omniauth-facebook', '1.4.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

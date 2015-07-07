@@ -5,27 +5,69 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-=begin
+
 
 
 require 'nokogiri'
 
 file = File.open(File.expand_path('app/assets/sources/parking_meter_rates_and_time_limits.kml'))
+
+#file = File.open(File.expand_path('app/assets/sources/pmtest.kml'))
+
 data = Nokogiri::XML(file)
 
 data.css("Placemark").each do |placeMark|
 
   pm = ParkingMeter.new
 
-  pm.in_effect = /\d+\:\d+[\w|\s]+\d+\:+\d+[\w|\s]+/.match(placeMark.at('description'))
-  pm.name = /[0-9]+/.match(placeMark.at('name'))
-  pm.head_type = /(Single|Twin)/.match(placeMark.at('description'))
+  if /\d+\:\d+[\w|\s]+\d+\:+\d+[\w|\s]+/.match(placeMark.at('description'))
+    pm.in_effect = /\d+\:\d+[\w|\s]+\d+\:+\d+[\w|\s]+/.match(placeMark.at('description'))
+  else
+    puts "invalid in effect"
+    exit 1
+  end
+  if /[0-9]+/.match(placeMark.at('name'))
+    pm.name = /[0-9]+/.match(placeMark.at('name'))
+  else
+    puts "invalid name"
+    exit 1
+  end
+  if /(Single|Twin)/.match(placeMark.at('description'))
+    pm.head_type = /(Single|Twin)/.match(placeMark.at('description'))
+  else
+    puts "invalid type"
+    exit 1
+  end
+  if /[0-9]\sHr/.match(placeMark.at('description'))
   pm.time_limit = /[0-9]\sHr/.match(placeMark.at('description'))
+  else
+    puts "invalid time limit"
+    exit 1
+  end
+  if /(\$[0-9]*\.[0-9]*)/.match(placeMark.at('description'))
   pm.rate = /(\$[0-9]*\.[0-9]*)/.match(placeMark.at('description'))
+  else
+    puts "invalid rate"
+    exit 1
+  end
+  if /[0-9]+/.match(placeMark.at('name'))
   pm.pay_by_phone = /[0-9]+/.match(placeMark.at('name'))
+  else
+    puts "invalid pay by phone"
+    exit 1
+  end
+  if /(49\.\d+)/.match(placeMark.at('coordinates'))
   lat = /(49\.\d+)/.match(placeMark.at('coordinates'))
+  else
+    puts "invalid lat"
+    exit 1
+  end
+  if /(-123\.\d+)/.match(placeMark.at('coordinates'))
   lng = /(-123\.\d+)/.match(placeMark.at('coordinates'))
-
+  else
+    puts "invalid lng"
+    exit 1
+  end
 
   if lat!=nil
     pm.lat = lat[0]
@@ -41,14 +83,18 @@ data.css("Placemark").each do |placeMark|
 
   pm.save!
 
+
   if pm.save
     puts "Parking meter Success"
   else
     puts "Parking meter didn't save"
   end
 end
-=end
 
+
+
+
+=begin
 
 require 'openssl'
 require 'csv'
@@ -59,14 +105,7 @@ require 'geokit-rails'
 
 
 file = File.expand_path('app/assets/sources/crime_2014.csv')
-=begin
-#open csv and save locally
-open("ftp://webftp.vancouver.ca/opendata/csv/crime_2014.csv") do |ftp|
-  open(file, 'w') do |file|
-    file.write(ftp.read)
-  end
-end
-=end
+
 
 addresses = Array.new
 
@@ -106,3 +145,4 @@ csv.each do |row|
 end
 
 
+=end
