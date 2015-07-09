@@ -44,22 +44,17 @@
       }
       <% end %>
 
-      var mockCrimeData = crimes
-
       function initialize() {
-          var mapOptions = {
-              zoom: 14,
-              center: new google.maps.LatLng(49.28101, -123.118),
-              mapTypeId: google.maps.MapTypeId.ROADMAP
-          };
 
-          map = new google.maps.Map(document.getElementById('map-canvas'),
-                  mapOptions);
+          map = new google.maps.Map(document.getElementById('map'));
 
-          var pointArray = new google.maps.MVCArray(mockCrimeData);
+          var pointArray = new google.maps.MVCArray(crimes);
 
           heatmap = new google.maps.visualization.HeatmapLayer({
-              data: pointArray
+              data: pointArray,
+              radius: 70,
+              opacity: 0.5,
+              gradient: gradient
           });
 
           heatmap.setMap(map);
@@ -69,8 +64,7 @@
           heatmap.setMap(heatmap.getMap() ? null : map);
       }
 
-      function changeGradient() {
-          var gradient = [
+      var gradient = [
               'rgba(0, 255, 255, 0)',
               'rgba(0, 255, 255, 1)',
               'rgba(0, 191, 255, 1)',
@@ -86,16 +80,6 @@
               'rgba(191, 0, 31, 1)',
               'rgba(255, 0, 0, 1)'
           ]
-          heatmap.set('gradient', heatmap.get('gradient') ? null : gradient);
-      }
-
-      function changeRadius() {
-          heatmap.set('radius', heatmap.get('radius') ? null : 70);
-      }
-
-      function changeOpacity() {
-          heatmap.set('opacity', heatmap.get('opacity') ? null : 0.5);
-      }
 
       google.maps.event.addDomListener(window, 'load', initialize);
 
