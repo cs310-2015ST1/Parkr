@@ -4,17 +4,18 @@
 <p id="notice"><%= notice %></p>
 <html>
 <body style="background-color:#FFFFFF">
-<br>
 <center>
   <div id="wrapper">
     <div id="sidebar-wrapper">
       <ul class="sidebar-nav">
-        <li class="sidebar-brand"><a href="#"></a>
+        <li class="sidebar-brand">
           <div id="user-widget">
+            <br>
             <% if current_user %>
                 Welcome <strong><%= current_user.user_name %></strong>!
                 <%= link_to "Sign out", signout_path, id: "sign_out" %>
             <% else %>
+                <%= image_tag("facebook-2.ico", :alt => "Sign in to Facebook") %>
                 <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
             <% end %>
           </div>
@@ -27,18 +28,29 @@
               <br>
               <%= label :distance, "Distance (km):\n " %><br>
               <%= text_field_tag :distance, params[:distance] %><br>
-              <!-- insert rate filter -->
+
+
+              <!-- TODO insert rate filter -->
+
+
               <br>
               <%= submit_tag "Search" %>
               </center>
           <% end %>
           <br><br>
-          <li><a href="#"></a>
+          <li>
             <button onclick="toggleHeatmap()">Toggle Crimemap</button>
           </li>
           <li><a href="#"></a>
-            <!-- insert EV toggle here-->
+
+
+            <!-- TODO insert EV toggle here-->
+
+
           </li>
+          <div id="marker_info">
+
+          </div>
           </ul>
     </div>
     <div id="page-content-wrapper">
@@ -46,11 +58,10 @@
         <div class="container">
           <div class="row">
             <div class="col-md-12">
-              <h1>Parkr</h1>
-              <br>
-              <div style='width: 100%;'>
-                <div id="map" style='width: 100%; height: 530px;'></div>
-              </div>
+            <h1>
+              <%= image_tag("parkr.png", :width => "20%", :height => "20%") %>
+            </h1>
+            <div id="map" style='width: 100%; height: 530px;'>
               <script defer type="text/javascript">
                   handler = Gmaps.build('Google', { markers: { clusterer: { maxZoom: 18, gridSize: 100 }}});
                   handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
@@ -101,16 +112,16 @@
                       heatmap.setMap(heatmap.getMap() ?  null : handler.getMap());
                   }
 
+
               </script>
-              <!-- content of page -->
+            </div>
+                </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-
-  <br>
 </center>
 
 </body>

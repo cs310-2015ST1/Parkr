@@ -3,12 +3,13 @@ class ParkingMetersController < ApplicationController
 
   # GET /parking_meters
   # GET /parking_meters.json
+
   def index
 
 
     if params[:location].present?
       if params[:distance].present?
-        @parking_meters  = ParkingMeter.near(params[:location], params[:distance])
+        @parking_meters  = ParkingMeter.near(params[:location], params[:distance].to_i)
       else
         @parking_meters  = ParkingMeter.near(params[:location], 1)
       end

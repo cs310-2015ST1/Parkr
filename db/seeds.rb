@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-
+=begin
 
 require 'nokogiri'
 
@@ -84,7 +84,7 @@ data.css("Placemark").each do |placeMark|
 end
 
 
-=begin
+=end
 
 require 'openssl'
 require 'csv'
@@ -134,4 +134,3 @@ csv.each do |row|
 
 end
 
-=end
