@@ -2,74 +2,116 @@
 <script src='//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js' type='text/javascript'></script>
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=visualization"></script>
 <p id="notice"><%= notice %></p>
+<html>
+<body style="background-color:#FFFFFF">
+<br>
+<center>
+  <div id="wrapper">
+    <div id="sidebar-wrapper">
+      <ul class="sidebar-nav">
+        <li class="sidebar-brand"><a href="#"></a>
+          <div id="user-widget">
+            <% if current_user %>
+                Welcome <strong><%= current_user.user_name %></strong>!
+                <%= link_to "Sign out", signout_path, id: "sign_out" %>
+            <% else %>
+                <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
+            <% end %>
+          </div>
+          <div class="space"></div>
+        </li>
+        <center>
+          <%= form_tag parking_meters_path, method: :get do %>
+              <%= label :location, "Parking meters near:\n " %><br>
+              <%= text_field_tag :location, params[:location] %><br>
+              <br>
+              <%= label :distance, "Distance (km):\n " %><br>
+              <%= text_field_tag :distance, params[:distance] %><br>
+              <!-- insert rate filter -->
+              <br>
+              <%= submit_tag "Search" %>
+              </center>
+          <% end %>
+          <br><br>
+          <li><a href="#"></a>
+            <button onclick="toggleHeatmap()">Toggle Crimemap</button>
+          </li>
+          <li><a href="#"></a>
+            <!-- insert EV toggle here-->
+          </li>
+          </ul>
+    </div>
+    <div id="page-content-wrapper">
+      <div class="page-content">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h1>Parkr</h1>
+              <br>
+              <div style='width: 100%;'>
+                <div id="map" style='width: 100%; height: 530px;'></div>
+              </div>
+              <script defer type="text/javascript">
+                  handler = Gmaps.build('Google', { markers: { clusterer: { maxZoom: 18, gridSize: 100 }}});
+                  handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+                      markers = handler.addMarkers(<%=raw @hash.to_json %>);
+                      handler.map.centerOn(<%=@location%>);
+                      handler.getMap().setZoom(15);
+                  });
 
-<center><h1>Parkr</h1>
+                  // Add Crime Heatmap
+                  var pointarray, heatmap;
 
-<%= form_tag parking_meters_path, method: :get do %>
-    <%= label :location, "Search parking meters near: " %>
-    <%= text_field_tag :location, params[:location] %>
+                  var crimes = [];
+                  <% for crime in CrimeDatum.find_each %>
+                  {
+                      crimes.push({location: new google.maps.LatLng(<%=crime.lat%>, <%=crime.lon%>), weight: 5});
+                  }
+                  <% end %>
 
-    <%= label :distance, "Distance (km): " %>
-    <%= text_field_tag :distance, params[:distance] %>
+                  var pointArray = new google.maps.MVCArray(crimes);
 
-    <%= submit_tag "Search" %>
-<% end %>
-  <button onclick="toggleHeatmap()">Toggle Crimemap</button>
+                  var gradient = [
+                      'rgba(0, 255, 255, 0)',
+                      'rgba(0, 255, 255, 1)',
+                      'rgba(0, 191, 255, 1)',
+                      'rgba(0, 127, 255, 1)',
+                      'rgba(0, 63, 255, 1)',
+                      'rgba(0, 0, 255, 1)',
+                      'rgba(0, 0, 223, 1)',
+                      'rgba(0, 0, 191, 1)',
+                      'rgba(0, 0, 159, 1)',
+                      'rgba(0, 0, 127, 1)',
+                      'rgba(63, 0, 91, 1)',
+                      'rgba(127, 0, 63, 1)',
+                      'rgba(191, 0, 31, 1)',
+                      'rgba(255, 0, 0, 1)'
+                  ];
+
+                  heatmap = new google.maps.visualization.HeatmapLayer({
+                      data: pointArray,
+                      radius: 80,
+                      opacity: 0.8,
+                      gradient: gradient
+                  });
+
+                  heatmap.setMap(null);
+
+                  function toggleHeatmap() {
+                      heatmap.setMap(heatmap.getMap() ?  null : handler.getMap());
+                  }
+
+              </script>
+              <!-- content of page -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <br>
 </center>
-<br>
-<div style='width: 100%;'>
-  <div id="map" style='width: 100%; height: 430px;'></div>
-</div>
-<script defer type="text/javascript">
-    handler = Gmaps.build('Google', { markers: { clusterer: { maxZoom: 18, gridSize: 100 }}});
-    handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
-        markers = handler.addMarkers(<%=raw @hash.to_json %>);
-        handler.map.centerOn(<%=@location%>);
-        handler.getMap().setZoom(15);
-    });
 
-    // Add Crime Heatmap
-    var pointarray, heatmap;
-
-    var crimes = [];
-    <% for crime in CrimeDatum.find_each %>
-    {
-        crimes.push({location: new google.maps.LatLng(<%=crime.lat%>, <%=crime.lon%>), weight: 5});
-    }
-    <% end %>
-
-    var pointArray = new google.maps.MVCArray(crimes);
-
-    var gradient = [
-        'rgba(0, 255, 255, 0)',
-        'rgba(0, 255, 255, 1)',
-        'rgba(0, 191, 255, 1)',
-        'rgba(0, 127, 255, 1)',
-        'rgba(0, 63, 255, 1)',
-        'rgba(0, 0, 255, 1)',
-        'rgba(0, 0, 223, 1)',
-        'rgba(0, 0, 191, 1)',
-        'rgba(0, 0, 159, 1)',
-        'rgba(0, 0, 127, 1)',
-        'rgba(63, 0, 91, 1)',
-        'rgba(127, 0, 63, 1)',
-        'rgba(191, 0, 31, 1)',
-        'rgba(255, 0, 0, 1)'
-    ];
-
-        heatmap = new google.maps.visualization.HeatmapLayer({
-            data: pointArray,
-            radius: 80,
-            opacity: 0.8,
-            gradient: gradient
-        });
-
-        heatmap.setMap(null);
-
-    function toggleHeatmap() {
-        heatmap.setMap(heatmap.getMap() ?  null : handler.getMap());
-    }
-
-</script>
-
+</body>
+</html>

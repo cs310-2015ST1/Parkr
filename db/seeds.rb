@@ -28,37 +28,37 @@ data.css("Placemark").each do |placeMark|
   if /[0-9]+/.match(placeMark.at('name'))
     pm.name = /[0-9]+/.match(placeMark.at('name'))
   else
-    puts "invalid name"
+    pm.name = "Not Specified"
   end
   if /(Single|Twin)/.match(placeMark.at('description'))
     pm.head_type = /(Single|Twin)/.match(placeMark.at('description'))
   else
-    puts "invalid type"
+    pm.head_type = "Not Specified"
   end
   if /[0-9]\sHr/.match(placeMark.at('description'))
   pm.time_limit = /[0-9]\sHr/.match(placeMark.at('description'))
   else
-    puts "invalid time limit"
+    pm.time_limit = "Not Specified"
   end
   if /(\$[0-9]*\.[0-9]*)/.match(placeMark.at('description'))
   pm.rate = /(\$[0-9]*\.[0-9]*)/.match(placeMark.at('description'))
   else
-    puts "invalid rate"
+    pm.rate = "Not Specified"
   end
   if /[0-9]+/.match(placeMark.at('name'))
   pm.pay_by_phone = /[0-9]+/.match(placeMark.at('name'))
   else
-    puts "invalid pay by phone"
+    pm.pay_by_phone = "Not Specified"
   end
   if /(49\.\d+)/.match(placeMark.at('coordinates'))
   lat = /(49\.\d+)/.match(placeMark.at('coordinates'))
   else
-    puts "invalid lat"
+    lat = "Not Specified"
   end
   if /(-123\.\d+)/.match(placeMark.at('coordinates'))
   lng = /(-123\.\d+)/.match(placeMark.at('coordinates'))
   else
-    puts "invalid lng"
+    lng = "Not Specified"
   end
 
   if lat!=nil
