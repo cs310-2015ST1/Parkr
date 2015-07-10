@@ -22,7 +22,7 @@
   <div id="map" style='width: 100%; height: 430px;'></div>
 </div>
 <script defer type="text/javascript">
-    handler = Gmaps.build('Google', { markers: { clusterer: { maxZoom: 15, gridSize: 100 }}});
+    handler = Gmaps.build('Google', { markers: { clusterer: { maxZoom: 18, gridSize: 100 }}});
     handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
         markers = handler.addMarkers(<%=raw @hash.to_json %>);
         handler.map.centerOn(<%=@location%>);
@@ -30,7 +30,7 @@
     });
 
     // Add Crime Heatmap
-    var map, pointarray, heatmap;
+    var pointarray, heatmap;
 
     var crimes = [];
     <% for crime in CrimeDatum.find_each %>
@@ -56,7 +56,7 @@
         'rgba(127, 0, 63, 1)',
         'rgba(191, 0, 31, 1)',
         'rgba(255, 0, 0, 1)'
-    ]
+    ];
 
         heatmap = new google.maps.visualization.HeatmapLayer({
             data: pointArray,

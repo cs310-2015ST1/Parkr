@@ -20,11 +20,11 @@ data.css("Placemark").each do |placeMark|
 
   pm = ParkingMeter.new
 
-  if /\d*\:\d*[\w|\s]*\d*\:\d*[\w|\s]*/.match(placeMark.at('description'))
-    pm.in_effect = /\d*\:\d*[\w|\s]*\d*\:\d*[\w|\s]*/.match(placeMark.at('description'))
-  else
-    puts "invalid in effect" # removed "exit 1 from each check"
-  end
+ # if /\d+\:\d+[\w|\s]+\d+\:\d+[\w|\s]+/.match(placeMark.at('description'))
+    pm.in_effect = /\d+\:\d+[\w|\s]+\d+\:\d+[\w|\s]+/.match(placeMark.at('description'))
+  #else
+   # puts "invalid in effect" # removed "exit 1 from each check"
+  #end
   if /[0-9]+/.match(placeMark.at('name'))
     pm.name = /[0-9]+/.match(placeMark.at('name'))
   else
@@ -84,8 +84,6 @@ data.css("Placemark").each do |placeMark|
 end
 
 
-
-
 =begin
 
 require 'openssl'
@@ -135,6 +133,5 @@ csv.each do |row|
   end
 
 end
-
 
 =end
