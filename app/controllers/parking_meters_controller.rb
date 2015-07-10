@@ -5,8 +5,6 @@ class ParkingMetersController < ApplicationController
   # GET /parking_meters.json
 
   def index
-
-
     if params[:location].present?
       if params[:distance].present?
         @parking_meters  = ParkingMeter.near(params[:location], params[:distance].to_i)
@@ -38,6 +36,11 @@ Pay By Phone: #{pm.pay_by_phone}<br>
 In Effect: #{pm.in_effect}</p>"
       marker.lat pm.lat
       marker.lng pm.lng
+      marker.picture ({
+                         url: "#{view_context.image_path("parking-meter.png") }",
+                         width: "44",
+                         height: "58"
+                     })
       end
   end
 
