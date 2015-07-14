@@ -13,11 +13,11 @@ module ParkingMetersHelper
 
     pm = ParkingMeter.new
 
-    # if /\d+\:\d+[\w|\s]+\d+\:\d+[\w|\s]+/.match(placeMark.at('description'))
+    if /\d+\:\d+[\w|\s]+\d+\:\d+[\w|\s]+/.match(placeMark.at('description'))
     pm.in_effect = /\d+\:\d+[\w|\s]+\d+\:\d+[\w|\s]+/.match(placeMark.at('description'))
-    #else
-    # puts "invalid in effect" # removed "exit 1 from each check"
-    #end
+    else
+     pm.in_effect = "Not Specified"
+    end
     if /[0-9]+/.match(placeMark.at('name'))
       pm.name = /[0-9]+/.match(placeMark.at('name'))
     else
