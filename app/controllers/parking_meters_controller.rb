@@ -5,6 +5,7 @@ class ParkingMetersController < ApplicationController
   # GET /parking_meters.json
 
   def index
+
     if params[:location].present?
       if params[:distance].present?
         @parking_meters  = ParkingMeter.near(params[:location], params[:distance].to_i)
@@ -41,7 +42,11 @@ In Effect: #{pm.in_effect}</p>"
                          width: "44",
                          height: "58"
                      })
-      end
+
+
+    end
+
+
   end
 
 
