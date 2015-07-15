@@ -1,0 +1,25 @@
+<%= form_for(@electric_vehicle) do |f| %>
+  <% if @electric_vehicle.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@electric_vehicle.errors.count, "error") %> prohibited this electric_vehicle from being saved:</h2>
+
+      <ul>
+      <% @electric_vehicle.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :lat %><br>
+    <%= f.text_field :lat %>
+  </div>
+  <div class="field">
+    <%= f.label :lon %><br>
+    <%= f.text_field :lon %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

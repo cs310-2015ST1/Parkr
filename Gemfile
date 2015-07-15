@@ -35,6 +35,7 @@ gem 'omniauth-facebook', '1.4.0'
 gem 'markable',  :git => 'https://github.com/chrome/markable.git'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'zip-zip'
 
 group :development, :test do
   gem 'sqlite3', '1.3.10'

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Lat:</strong>
+  <%= @electric_vehicle.lat %>
+</p>
+
+<p>
+  <strong>Lon:</strong>
+  <%= @electric_vehicle.lon %>
+</p>
+
+<%= link_to 'Edit', edit_electric_vehicle_path(@electric_vehicle) %> |
+<%= link_to 'Back', electric_vehicles_path %>

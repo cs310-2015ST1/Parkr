@@ -5,6 +5,7 @@ class ParkingMetersController < ApplicationController
   # GET /parking_meters.json
 
   def index
+
     if params[:location].present?
       if params[:distance].present?
         @parking_meters  = ParkingMeter.near(params[:location], params[:distance].to_i)
@@ -34,7 +35,8 @@ Time Limit: #{pm.time_limit}<br>
 Type: #{pm.head_type}<br>
 Pay By Phone: #{pm.pay_by_phone}<br>
 In Effect: #{pm.in_effect}<br>
-Favourite: </p>"
+Visited: #{pm.visited}<br></p>"
+
       marker.lat pm.lat
       marker.lng pm.lng
       marker.picture ({
@@ -42,7 +44,11 @@ Favourite: </p>"
                          width: "44",
                          height: "58"
                      })
-      end
+
+
+    end
+
+
   end
 
 
