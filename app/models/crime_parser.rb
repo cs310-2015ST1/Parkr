@@ -1,3 +1,5 @@
+class CrimeParser
+
 
   require 'openssl'
   require 'csv'
@@ -54,4 +56,6 @@
 
       end
     end
+  end
+
   end

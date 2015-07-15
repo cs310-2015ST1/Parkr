@@ -1,3 +1,5 @@
+class ParkingMeterParser
+
 require 'nokogiri'
 
   file = File.open(File.expand_path('app/assets/sources/parking_meter_rates_and_time_limits.kml'))
@@ -71,3 +73,4 @@ require 'nokogiri'
       puts "Parking meter didn't save"
     end
   end
+end

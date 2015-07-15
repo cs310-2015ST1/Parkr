@@ -1,3 +1,4 @@
+class ElectricVehicleParser
 
 require 'openssl'
 require 'csv'
@@ -29,4 +30,5 @@ csv.each do |row|
     puts "EV save not successful"
   end
 
+  end
 end
