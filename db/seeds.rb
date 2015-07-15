@@ -93,17 +93,17 @@ require 'open-uri'
 require 'geokit-rails'
 
 
-
+=begin
 
 file = File.expand_path('app/assets/sources/crime_2014.csv')
-=begin
+
 #open csv and save locally
 open("ftp://webftp.vancouver.ca/opendata/csv/crime_2014.csv") do |ftp|
   open(file, 'w') do |file|
     file.write(ftp.read)
   end
 end
-=end
+
 
 addresses = Array.new
 
@@ -144,6 +144,37 @@ csv.each do |row|
     end
   end
 
+=end
 
+file_path = File.expand_path('app/assets/sources/electric_vehicle_charging_stations.csv')
 
+=begin
+open("ftp://webftp.vancouver.ca/OpenData/csv/electric_vehicle_charging_stations.csv") do |ftp|
+  open(file_path, 'w') do |f|
+    f.write(ftp.read)
+  end
+end
+=end
 
+csv_text = File.read(file_path)
+csv = CSV.parse(csv_text, :headers =>true)
+csv.each do |row|
+  ev_lat = row[0].to_f
+  ev_lon = row[1].to_f
+
+  puts ev_lat, ev_lon
+
+  if ev_lat !=nil && ev_lon !=nil
+
+  ev = ElectricVehicle.new
+  ev.lat = ev_lat
+  ev.lon = ev_lon
+
+  ev.save!
+
+    puts "EV save successful"
+  else
+    puts "EV save not successful"
+  end
+
+end
