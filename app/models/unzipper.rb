@@ -1,4 +1,4 @@
-=begin
+begin
 require 'rubygems'
 require 'open-uri'
 require 'rubyzip'
@@ -28,6 +28,6 @@ open("ftp://webftp.vancouver.ca/opendata/csv/crime_2014.csv") do |ftp|
     file.write(ftp.read)
   end
 end
-=end
+end
 
 
