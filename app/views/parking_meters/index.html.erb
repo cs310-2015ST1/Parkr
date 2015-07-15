@@ -43,6 +43,7 @@
           </li>
 
 
+
             <input type = "submit" id="gold_star" name="gold_star"
                    class="gold_star-button iconize" value="" />
 
@@ -52,7 +53,6 @@
             <!-- TODO insert EV toggle here-->
 
 
-            <button onclick="toggleHeatmap()">Toggle EV chargers</button>
           </li>
           <br>
           <li id="marker_info" style="width: 90%; height: 50% ; text-align: center; background: #FFFFFF; border:1px solid #000000; overflow:auto";>
@@ -103,11 +103,11 @@
                   var pointarray, heatmap;
 
                   var crimes = [];
-                  <!--<% for crime in CrimeDatum.find_each %>-->
-//                  {
-//                      crimes.push({location: new google.maps.LatLng(<%=crime.lat%>, <%=crime.lon%>), weight: 5});
-//                  }
-                  <!--<% end %>-->
+                  <% for crime in CrimeDatum.find_each %>
+                  {
+                      crimes.push({location: new google.maps.LatLng(<%=crime.lat%>, <%=crime.lon%>), weight: 5});
+                  }
+                  <% end %>
 
                   var pointArray = new google.maps.MVCArray(crimes);
 
