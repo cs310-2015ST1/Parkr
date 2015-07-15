@@ -6,13 +6,11 @@
 
 # Ignore bundler config.
 /.bundle
-*.iml
+
 *.iws
 
-.idea/
-.idea/workspace.xml
-.idea/runConfigurations
-.idea/Parkr.iml
+.idea/*
+.idea
 
 # Ignore the default SQLite database.
 /db/*.sqlite3
