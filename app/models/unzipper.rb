@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'open-uri'
-require 'zipruby'
+require 'zip/zip'
 require 'openssl'
 
 # Pull remote KML file, unzip, and store locally
