@@ -37,31 +37,29 @@
               <%= submit_tag "Search" %>
               </center>
           <% end %>
-          <br><br>
+          <br>
           <li>
             <button onclick="toggleHeatmap()">Toggle Crimemap</button>
           </li>
-          <li><a href="#"></a>
-
-
-            <!-- TODO insert EV toggle here-->
-
-
+          <li>
+            <button onclick="toggleHeatmap()">Toggle EV chargers</button>
           </li>
           <br>
           <li id="marker_info" style="width: 90%; height: 50% ; text-align: center; background: #FFFFFF; border:1px solid #000000; overflow:auto";>
             <p>
+              <% i = 0 %>
               <%if @parking_meters != nil%>
-              <%for pm in @parking_meters%>
-                  <%= image_tag("parking-meter.png", :width => "8%", :height => "8%") %>
-                  <%="Rate: #{pm.rate}"%><br>
-                  <%="Time Limit: #{pm.time_limit}"%><br>
-                  <%="Type: #{pm.head_type}"%><br>
-                  <%="Pay By Phone: #{pm.pay_by_phone}"%><br>
-                  <%="In Effect: #{pm.in_effect}"%><br>
-                  <br>
+                <%for pm in @parking_meters%>
+                      <%= (i = i+1).to_s + "."%>
+                      <%= image_tag("parking-meter.png", :width => "11%", :height => "11%") %>
+                      <%="Rate: #{pm.rate}"%><br>
+                      <%="Time Limit: #{pm.time_limit}"%><br>
+                      <%="Type: #{pm.head_type}"%><br>
+                      <%="Pay By Phone: #{pm.pay_by_phone}"%><br>
+                      <%="In Effect: #{pm.in_effect}"%><br>
+                      <br>
+                <%end%>
               <%end%>
-                  <%end%>
             </p>
           </li><br>
           </ul>
@@ -83,6 +81,7 @@
                       handler.map.centerOn(<%=@location%>);
                       handler.getMap().setZoom(15);
                   });
+
 
                   // Add Crime Heatmap
                   var pointarray, heatmap;
