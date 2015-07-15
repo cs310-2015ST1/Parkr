@@ -20,3 +20,4 @@
 /log/*
 !/log/.keep
 /tmp
+.idea
