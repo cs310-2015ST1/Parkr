@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :electric_vehicles
   resources :parking_meters
   resources :crime_data
   get 'unzipper/unzip'
