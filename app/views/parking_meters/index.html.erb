@@ -41,6 +41,10 @@
           <li>
             <button onclick="toggleHeatmap()">Toggle Crimemap</button>
           </li>
+          <li>
+            <input type = "submit" id="gold_star" name="gold_star"
+                   class="gold_star-button iconize" value="" />
+          </li>
           <li><a href="#"></a>
 
 
@@ -74,11 +78,11 @@
                   var pointarray, heatmap;
 
                   var crimes = [];
-                  <% for crime in CrimeDatum.find_each %>
-                  {
-                      crimes.push({location: new google.maps.LatLng(<%=crime.lat%>, <%=crime.lon%>), weight: 5});
-                  }
-                  <% end %>
+                  <!--<% for crime in CrimeDatum.find_each %>-->
+//                  {
+//                      crimes.push({location: new google.maps.LatLng(<%=crime.lat%>, <%=crime.lon%>), weight: 5});
+//                  }
+                  <!--<% end %>-->
 
                   var pointArray = new google.maps.MVCArray(crimes);
 
@@ -112,6 +116,12 @@
                       heatmap.setMap(heatmap.getMap() ?  null : handler.getMap());
                   }
 
+                  document.getElementById("gold_star").addEventListener("click", function (e) {
+                      var target = e.target;
+
+                      target.classList.toggle("iconize");
+                      target.classList.toggle("iconize2");
+                  }, false);
 
               </script>
             </div>

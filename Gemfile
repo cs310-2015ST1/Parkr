@@ -32,6 +32,7 @@ gem 'geokit-rails'
 # gem 'unicorn'
 gem 'omniauth'
 gem 'omniauth-facebook', '1.4.0'
+gem 'markable',  :git => 'https://github.com/chrome/markable.git'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
