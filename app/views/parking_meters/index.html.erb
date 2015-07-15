@@ -41,11 +41,11 @@
           <li>
             <button onclick="toggleHeatmap()">Toggle Crimemap</button>
           </li>
-          <li>
+
 
             <input type = "submit" id="gold_star" name="gold_star"
                    class="gold_star-button iconize" value="" />
-          </li>
+
           <li><a href="#"></a>
 
 
@@ -62,11 +62,17 @@
                 <%for pm in @parking_meters%>
                       <%= (i = i+1).to_s + "."%>
                       <%= image_tag("parking-meter.png", :width => "11%", :height => "11%") %>
-                      <%="Rate: #{pm.rate}"%><br>
+                      <%="Rates: #{pm.rate}"%><br>
                       <%="Time Limit: #{pm.time_limit}"%><br>
                       <%="Type: #{pm.head_type}"%><br>
                       <%="Pay By Phone: #{pm.pay_by_phone}"%><br>
                       <%="In Effect: #{pm.in_effect}"%><br>
+                      <%if pm.marked_as? :favorite, :by => current_user%>
+                         <div class="gold_star-button iconize"><%pm.unmark :favourite, current_user%></div>
+                          <%else%>
+                          <div class="gold_star-button iconize2"><%pm.mark_as :favourite, current_user%></div>
+                      <%end%>
+
                       <br>
                 <%end%>
               <%end%>
