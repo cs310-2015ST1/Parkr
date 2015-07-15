@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Electric Vehicles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Lat</th>
+      <th>Lon</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @electric_vehicles.each do |electric_vehicle| %>
+      <tr>
+        <td><%= electric_vehicle.lat %></td>
+        <td><%= electric_vehicle.lon %></td>
+        <td><%= link_to 'Show', electric_vehicle %></td>
+        <td><%= link_to 'Edit', edit_electric_vehicle_path(electric_vehicle) %></td>
+        <td><%= link_to 'Destroy', electric_vehicle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Electric vehicle', new_electric_vehicle_path %>
