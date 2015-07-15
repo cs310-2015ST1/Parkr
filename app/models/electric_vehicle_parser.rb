@@ -1,4 +1,4 @@
-=begin
+
 require 'openssl'
 require 'csv'
 require 'open-uri'
@@ -30,4 +30,3 @@ csv.each do |row|
   end
 
 end
-=end

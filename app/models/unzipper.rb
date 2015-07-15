@@ -1,7 +1,6 @@
-=begin
 require 'rubygems'
 require 'open-uri'
-require 'rubyzip'
+require 'zip/zip'
 require 'openssl'
 
 # Pull remote KML file, unzip, and store locally
@@ -28,6 +27,3 @@ open("ftp://webftp.vancouver.ca/opendata/csv/crime_2014.csv") do |ftp|
     file.write(ftp.read)
   end
 end
-=end
-
-

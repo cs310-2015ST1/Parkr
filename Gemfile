@@ -34,6 +34,7 @@ gem 'omniauth'
 gem 'omniauth-facebook', '1.4.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'zip-zip'
 
 group :development, :test do
   gem 'sqlite3', '1.3.10'

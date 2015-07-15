@@ -14,3 +14,7 @@ class ParkingMeterTest < ActiveSupport::TestCase
     end
   end
 end
+
+
+
+#file = File.open(File.expand_path('app/assets/sources/pmtest.kml'))

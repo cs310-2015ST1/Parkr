@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :crime_data
   get 'unzipper/unzip'
   get 'meter_parser/parse'
+  get 'electric_vehicle_parser/parse'
   get 'crime_data/index' => 'heat_map'
 
 

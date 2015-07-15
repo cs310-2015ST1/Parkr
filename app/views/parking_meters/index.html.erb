@@ -49,7 +49,6 @@
 
           </li>
           <div id="marker_info">
-
           </div>
           </ul>
     </div>
@@ -68,6 +67,12 @@
                       markers = handler.addMarkers(<%=raw @hash.to_json %>);
                       handler.map.centerOn(<%=@location%>);
                       handler.getMap().setZoom(15);
+                      for (m in markers) {
+                          var html = "<table>Rate: "+ m.rate + "</table>";
+
+                          bindInfoWindow(m, html);
+                      }
+
                   });
 
                   // Add Crime Heatmap
@@ -110,6 +115,12 @@
 
                   function toggleHeatmap() {
                       heatmap.setMap(heatmap.getMap() ?  null : handler.getMap());
+                  }
+
+                  function bindInfoWindow(marker, html) {
+                      handler.getMap().event.addListener(marker, 'click', function() {
+                          document.getElementById('marker_info').innerHTML = html;
+                      });
                   }
 
 
