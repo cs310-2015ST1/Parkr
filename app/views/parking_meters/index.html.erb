@@ -51,6 +51,7 @@
           <br>
           <li id="marker_info" style="width: 90%; height: 50% ; text-align: center; background: #FFFFFF; border:1px solid #000000; overflow:auto";>
             <p>
+              <%if @parking_meters != nil%>
               <%for pm in @parking_meters%>
                   <%= image_tag("parking-meter.png", :width => "8%", :height => "8%") %>
                   <%="Rate: #{pm.rate}"%><br>
@@ -60,6 +61,7 @@
                   <%="In Effect: #{pm.in_effect}"%><br>
                   <br>
               <%end%>
+                  <%end%>
             </p>
           </li><br>
           </ul>
