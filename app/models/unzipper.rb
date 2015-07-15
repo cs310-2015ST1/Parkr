@@ -1,3 +1,4 @@
+=begin
 class Unzipper
 
 require 'rubygems'
@@ -32,3 +33,4 @@ end
 end
 end
 
+=end

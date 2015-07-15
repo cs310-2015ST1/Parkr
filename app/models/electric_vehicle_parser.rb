@@ -1,3 +1,4 @@
+=begin
 class ElectricVehicleParser
 
 require 'openssl'
@@ -31,4 +32,4 @@ csv.each do |row|
   end
 
   end
-end
+end=end
