@@ -1,6 +1,13 @@
 class CrimeDataController < ApplicationController
   before_action :set_crime_datum, only: [:show, :edit, :update, :destroy]
 
+  require 'csv'
+  require 'geokit-rails'
+
+  require 'openssl'
+  require 'open-uri'
+
+
   # GET /crime_data
   # GET /crime_data.json
   def index
@@ -26,27 +33,19 @@ class CrimeDataController < ApplicationController
   # POST /crime_data.json
   def self.pull
 
-    require 'openssl'
-    require 'open-uri'
-
     file = File.expand_path('app/assets/sources/crime_2014.csv')
 
 #open csv and save locally
     open("ftp://webftp.vancouver.ca/opendata/csv/crime_2014.csv") do |ftp|
       open(file, 'w') do |file|
        if file.write(ftp.read)
-         puts "crime data pulled and saved successfully"
+         puts "Crime data pulled and saved successfully"
        end
       end
     end
   end
 
   def self.parse
-
-
-    require 'csv'
-    require 'geokit-rails'
-
 
     addresses = Array.new
 

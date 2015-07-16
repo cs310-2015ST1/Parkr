@@ -1,6 +1,11 @@
 class ParkingMetersController < ApplicationController
   before_action :set_parking_meter, only: [:show, :edit, :update, :destroy]
 
+
+  require 'rubygems'
+  require 'zip/zip'
+  require 'openssl'
+
   # GET /parking_meters
   # GET /parking_meters.json
 
@@ -44,20 +49,10 @@ Visited: #{pm.visited}<br></p>"
                          width: "44",
                          height: "58"
                      })
-
-
     end
-
-
   end
 
 
-  # GET /parking_meters/1
-  # GET /parking_meters/1.json
-
-  require 'rubygems'
-  require 'zip/zip'
-  require 'openssl'
 
 
   # Pull remote KML file, unzip, and store locally
@@ -69,7 +64,7 @@ Visited: #{pm.visited}<br></p>"
         FileUtils.mkdir_p(File.dirname(f_path))
         zip_file.extract(f, f_path){true}
       }
-      puts "parking meters successfully extracted"
+      puts "Parking meters pulled and saved successfully"
     }
   end
 

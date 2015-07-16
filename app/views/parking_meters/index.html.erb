@@ -19,24 +19,11 @@
                 <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
             <% end %>
           </div>
-          <div class="space"></div>
+          <br>
         </li>
         <center>
-          <%= form_tag parking_meters_path, method: :get do %>
-              <%= label :location, "Parking meters near:\n " %><br>
-              <%= text_field_tag :location, params[:location] %><br>
-              <br>
-              <%= label :distance, "Distance (km):\n " %><br>
-              <%= text_field_tag :distance, params[:distance] %><br>
-
-
-              <!-- TODO insert rate filter -->
-
-
-              <br>
-              <%= submit_tag "Search" %>
+          <%= render 'searches/form' %>
               </center>
-          <% end %>
           <br>
           <li>
             <button onclick="toggleHeatmap()">Toggle Crimemap</button>
@@ -61,9 +48,9 @@
               <%if @parking_meters != nil%>
                 <%for pm in @parking_meters%>
                       <%if pm.marked_as? :favorite, :by => current_user%>
-                        <div class="gold_star-button iconize"><%pm.unmark :favourite, current_user%></div>
+                        <div class="gold_star-button iconize"><%pm.unmark :favorite, current_user%></div>
                     <%else%>
-                        <div class="gold_star-button iconize2"><%pm.mark_as :favourite, current_user%></div>
+                        <div class="gold_star-button iconize2"><%pm.mark_as :favorite, current_user%></div>
                     <%end%>
                       <%= (i = i+1).to_s + "."%>
                       <%= image_tag("parking-meter.png", :width => "11%", :height => "11%") %>
@@ -76,7 +63,7 @@
                       <br>
                 <%end%>
               <%else%>
-                  No Parking Meters
+                  No Parking Meters Present
               <%end%>
             </p>
           </li><br>
@@ -90,7 +77,7 @@
             <h1>
               <%= image_tag("parkr.png", :width => "20%", :height => "20%") %>
             </h1>
-            <div id="map" style='width: 100%; height: 530px;'>
+            <div id="map" style='width: 100%; height: 500px;'>
               <script defer type="text/javascript">
 
                   handler = Gmaps.build('Google', { markers: { clusterer: { maxZoom: 18, gridSize: 100 }}});
@@ -99,7 +86,6 @@
                       handler.map.centerOn(<%=@location%>);
                       handler.getMap().setZoom(15);
                   });
-
 
                   // Add Crime Heatmap
                   var pointarray, heatmap;

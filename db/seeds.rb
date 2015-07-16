@@ -14,9 +14,7 @@ source_path = "/Users/mackenziesampson1/RubymineProjects/Parkr/app/assets/source
 
 
 ParkingMetersController.unzip_file(zip_file, source_path)
-
 CrimeDataController.pull
-
 ElectricVehiclesController.pull
 
 ParkingMetersController.parse
