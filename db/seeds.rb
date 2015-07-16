@@ -9,16 +9,16 @@
 
 require 'open-uri'
 
-zip_file = open("http://data.vancouver.ca/download/kml/parking_meter_rates_and_time_limits.kmz")
-source_path = "/Users/mackenziesampson1/RubymineProjects/Parkr/app/assets/sources"
+#zip_file = open("http://data.vancouver.ca/download/kml/parking_meter_rates_and_time_limits.kmz")
+#source_path = "/Users/ClaireHS/Parkr/app/assets/sources"
 
 
-ParkingMetersController.unzip_file(zip_file, source_path)
+#ParkingMetersController.unzip_file(zip_file, source_path)
 
-CrimeDataController.pull
+#CrimeDataController.pull
 
 ElectricVehiclesController.pull
 
-ParkingMetersController.parse
-CrimeDataController.parse
+#ParkingMetersController.parse
+#CrimeDataController.parse
 ElectricVehiclesController.parse
