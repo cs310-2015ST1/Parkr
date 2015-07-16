@@ -12,6 +12,9 @@ class ParkingMetersController < ApplicationController
   def index
 
     if params[:location].present?
+      if current_user
+         current_user.searches.create(location: params[:location], user_id: current_user.uid)
+      end
       if params[:distance].present?
         @parking_meters  = ParkingMeter.near(params[:location], params[:distance].to_i)
       else

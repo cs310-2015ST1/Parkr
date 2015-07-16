@@ -13,15 +13,10 @@ require 'open-uri'
 #source_path = "/Users/ClaireHS/Parkr/app/assets/sources"
 
 
-<<<<<<< HEAD
-ParkingMetersController.unzip_file(zip_file, source_path)
-CrimeDataController.pull
-=======
 #ParkingMetersController.unzip_file(zip_file, source_path)
 
 #CrimeDataController.pull
 
->>>>>>> f35bc53de8009cf4cc3c7ced690052356f8b4420
 ElectricVehiclesController.pull
 
 #ParkingMetersController.parse

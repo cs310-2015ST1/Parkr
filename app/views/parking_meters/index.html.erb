@@ -22,9 +22,23 @@
           <br>
         </li>
         <center>
-          <%= render 'searches/form' %>
+          <%= form_tag parking_meters_path, method: :get do %>
+              <%= label :location, "Parking meters near:\n " %><br>
+              <%= text_field_tag :location, params[:location] %><br>
+              <br>
+              <%= label :distance, "Distance (km):\n " %><br>
+              <%= text_field_tag :distance, params[:distance] %><br>
+              <br>
+
+
+              <!-- TODO insert rate filter -->
+
+
+              <%= submit_tag "Search" %>
               </center>
+              <%end%>
           <br>
+
           <li>
             <button onclick="toggleHeatmap()">Toggle Crimemap</button>
           </li>
@@ -90,10 +104,6 @@
                       }*/
                   });
 
-<<<<<<< HEAD
-                  // Add Crime Heatmap
-                  var pointarray, heatmap;
-=======
                   function toggleEVmarkers() {
                       /*handler.buildMap({provider: {}, internal: {id: 'map'}}, function () {
                           ev_markers = handler.addMarkers(<%=raw @evs.to_json %>);
@@ -106,8 +116,6 @@
 
                       })*/
                   }
-
->>>>>>> f35bc53de8009cf4cc3c7ced690052356f8b4420
 
                   // Add Crime Heatmap
                   var pointArray, heatmap;
