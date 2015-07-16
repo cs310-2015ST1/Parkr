@@ -47,7 +47,7 @@
             <input type = "submit" id="gold_star" name="gold_star"
                    class="gold_star-button iconize" value="" />
 
-          <li><a href="#"></a>
+          <li>
 
 
             <!-- TODO insert EV toggle here-->
@@ -72,9 +72,10 @@
                           <%else%>
                           <div class="gold_star-button iconize2"><%pm.mark_as :favourite, current_user%></div>
                       <%end%>
-
                       <br>
                 <%end%>
+              <%else%>
+                  No Parking Meters
               <%end%>
             </p>
           </li><br>

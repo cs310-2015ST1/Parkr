@@ -7,8 +7,16 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+require 'open-uri'
 
-Unzipper
-CrimeParser
-ParkingMeterParser
-ElectricVehicleParser
+zip_file = open("http://data.vancouver.ca/download/kml/parking_meter_rates_and_time_limits.kmz")
+source_path = "/Users/mackenziesampson1/RubymineProjects/Parkr/app/assets/sources"
+
+
+ParkingMetersController.unzip_file(zip_file, source_path)
+
+CrimeDataController.pull
+
+ParkingMetersController.parse
+CrimeDataController.parse
+ElectricVehiclesController.parse
