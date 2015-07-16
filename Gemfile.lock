@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/chrome/markable.git
+  revision: 6fece7b200e339b87e2abf3cad190ab10966e04b
+  specs:
+    markable (0.1.4)
+      rails (>= 3.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -185,6 +192,7 @@ DEPENDENCIES
   gmaps4rails
   jbuilder
   jquery-rails
+  markable!
   omniauth
   omniauth-facebook (= 1.4.0)
   pg (= 0.17.1)
@@ -200,4 +208,4 @@ DEPENDENCIES
   zip-zip
 
 BUNDLED WITH
-   1.10.3
+   1.10.4

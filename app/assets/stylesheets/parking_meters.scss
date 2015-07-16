@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .space { margin-top: 50px; }
 
+
 #wrapper {
   height: 100%;
   padding-left: 250px;
@@ -47,4 +48,25 @@
   #sidebar-wrapper{
     left: 0;
   }
+}
+
+.gold_star-button {
+  display: table;
+  padding: 7px 15px 8px 15px;
+  border: none;
+  font-family:"open_sans_lightregular";
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.gold_star-button.iconize{
+  padding-right: 50px !important;
+  background: url("https://cdn4.iconfinder.com/data/icons/miu/22/common_star_favorite_bookmark-20.png") no-repeat 5px center;
+}
+
+.gold_star-button.iconize2 {
+  padding-right: 50px !important;
+  background: url("https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678064-star-20.png") no-repeat 5px center;
 }

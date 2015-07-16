@@ -39,6 +39,45 @@ class ElectricVehiclesController < ApplicationController
 
   # POST /electric_vehicles
   # POST /electric_vehicles.json
+  def self.pull
+
+    require 'openssl'
+    require 'open-uri'
+
+    file = File.expand_path('app/assets/sources/electric_vehicle_charging_stations.csv')
+
+#open csv and save locally
+    open("ftp://webftp.vancouver.ca/OpenData/csv/electric_vehicle_charging_stations.csv") do |ftp|
+      open(file, 'w') do |file|
+       if file.write(ftp.read)
+         puts "EV chargers pulled and saved successfully"
+       end
+      end
+    end
+  end
+
+  def self.parse
+
+    require 'csv'
+
+    csv_text = File.read(File.expand_path('app/assets/sources/electric_vehicle_charging_stations.csv'))
+    csv = CSV.parse(csv_text, :headers =>true)
+    csv.each do |row|
+      ev = ElectricVehicle.new
+      ev.lat = row[0].to_f
+      ev.lon = row[1].to_f
+
+      puts ev.lat, ev.lon
+
+      if ev.save!
+        puts "EV save successful"
+      else
+        puts "EV save not successful"
+      end
+
+    end
+  end
+
   def create
     @electric_vehicle = ElectricVehicle.new(electric_vehicle_params)
 

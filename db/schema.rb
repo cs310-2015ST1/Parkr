@@ -27,6 +27,18 @@ ActiveRecord::Schema.define(version: 20150715004052) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "marks", id: false, force: :cascade do |t|
+    t.integer  "marker_id"
+    t.string   "marker_type"
+    t.integer  "markable_id"
+    t.string   "markable_type"
+    t.string   "mark",          limit: 128
+    t.datetime "created_at"
+  end
+
+  add_index "marks", ["markable_id", "markable_type", "mark"], name: "index_marks_on_markable_id_and_markable_type_and_mark"
+  add_index "marks", ["marker_id", "marker_type", "mark"], name: "index_marks_on_marker_id_and_marker_type_and_mark"
+
   create_table "parking_meters", force: :cascade do |t|
     t.string   "name"
     t.string   "head_type"
