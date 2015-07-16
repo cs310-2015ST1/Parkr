@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :searches
+  resources :search_suggestions
   resources :electric_vehicles
   resources :parking_meters
   resources :crime_data

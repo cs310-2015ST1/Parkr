@@ -12,9 +12,11 @@
           <div id="user-widget">
             <br>
             <% if current_user %>
+                <%@current_user = current_user%>
                 Welcome <strong><%= current_user.user_name %></strong>!
                 <%= link_to "Sign out", signout_path, id: "sign_out" %>
             <% else %>
+                <%@current_user = nil%>
                 <%= image_tag("facebook-2.ico", :alt => "Sign in to Facebook") %>
                 <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
             <% end %>
@@ -22,8 +24,24 @@
           <br>
         </li>
         <center>
-          <%= render 'searches/form'%>
-              </center>
+          <form class="search-form">
+          <%= form_tag search_suggestions_path, method: :get do %>
+              <%= label :location, "Parking meters near:\n " %><br>
+              <%= text_field_tag :location, params[:location] %><br>
+              <br>
+              <%= label :distance, "Distance (km):\n " %><br>
+              <%= text_field_tag :distance, params[:distance] %><br>
+              <br>
+
+
+              <!-- TODO insert rate filter -->
+
+
+              <%= submit_tag "Search" %>
+
+              <%end%>
+            </form>
+        </center>
           <br>
 
           <li>
