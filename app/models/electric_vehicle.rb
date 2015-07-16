@@ -1,3 +1,5 @@
 class ElectricVehicle < ActiveRecord::Base
 
-  end
+
+end
+

@@ -36,11 +36,12 @@ class ParkingMetersController < ApplicationController
     @hash = Gmaps4rails.build_markers(@parking_meters) do |pm, marker|
       @pm = pm
       marker.infowindow "<p>Rate: #{pm.rate}<br>
-Time Limit: #{pm.time_limit}<br>
-Type: #{pm.head_type}<br>
-Pay By Phone: #{pm.pay_by_phone}<br>
-In Effect: #{pm.in_effect}<br>
-Visited: #{pm.visited}<br></p>"
+
+                         Time Limit: #{pm.time_limit}<br>
+                         Type: #{pm.head_type}<br>
+                         Pay By Phone: #{pm.pay_by_phone}<br>
+                         In Effect: #{pm.in_effect}<br>
+                         Visited: #{pm.visited}<br></p>"
 
       marker.lat pm.lat
       marker.lng pm.lng

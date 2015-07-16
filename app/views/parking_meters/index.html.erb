@@ -29,16 +29,11 @@
             <button onclick="toggleHeatmap()">Toggle Crimemap</button>
           </li>
 
-
-
-            <input type = "submit" id="gold_star" name="gold_star"
-                   class="gold_star-button iconize" value="" />
+          <input type = "submit" id="gold_star" name="gold_star"
+                 class="gold_star-button iconize" value="" />
 
           <li>
-
-
-            <!-- TODO insert EV toggle here-->
-
+            <button onclick="toggleEVmarkers()">Toggle EV</button>
 
           </li>
           <br>
@@ -59,7 +54,8 @@
                       <%="Type: #{pm.head_type}"%><br>
                       <%="Pay By Phone: #{pm.pay_by_phone}"%><br>
                       <%="In Effect: #{pm.in_effect}"%><br>
-                      <button>Visited</button>
+                      <%="Visitors: #{pm.visited}"%><br>
+                      <button type="button", onclick="addVisited()">Visited</button>
                       <br>
                 <%end%>
               <%else%>
@@ -85,20 +81,43 @@
                       markers = handler.addMarkers(<%=raw @hash.to_json %>);
                       handler.map.centerOn(<%=@location%>);
                       handler.getMap().setZoom(15);
+
+                      // add call to bindInfoWindow
+
+                      /*for (m in markers) {
+                          var html = "<table>Rate: "+ m.rate + "</table>";
+                          bindInfoWindow(m, html);
+                      }*/
                   });
 
+<<<<<<< HEAD
                   // Add Crime Heatmap
                   var pointarray, heatmap;
+=======
+                  function toggleEVmarkers() {
+                      /*handler.buildMap({provider: {}, internal: {id: 'map'}}, function () {
+                          ev_markers = handler.addMarkers(<%=raw @evs.to_json %>);
+                          if (ev_markers) {
+                              for (i in ev_markers) {
+                                  var visibility = (ev_markers[i].getVisible() == true) ? false : true;
+                                  ev_markers[i].setVisible(visibility);
+                              }
+                          }
 
+                      })*/
+                  }
+
+>>>>>>> f35bc53de8009cf4cc3c7ced690052356f8b4420
+
+                  // Add Crime Heatmap
+                  var pointArray, heatmap;
                   var crimes = [];
                   <% for crime in CrimeDatum.find_each %>
                   {
                       crimes.push({location: new google.maps.LatLng(<%=crime.lat%>, <%=crime.lon%>), weight: 5});
                   }
                   <% end %>
-
                   var pointArray = new google.maps.MVCArray(crimes);
-
                   var gradient = [
                       'rgba(0, 255, 255, 0)',
                       'rgba(0, 255, 255, 1)',
@@ -114,8 +133,7 @@
                       'rgba(127, 0, 63, 1)',
                       'rgba(191, 0, 31, 1)',
                       'rgba(255, 0, 0, 1)'
-                  ];
-
+                  ]
                   heatmap = new google.maps.visualization.HeatmapLayer({
                       data: pointArray,
                       radius: 80,
@@ -132,7 +150,6 @@
 
                   document.getElementById("gold_star").addEventListener("click", function (e) {
                       var target = e.target;
-
                       target.classList.toggle("iconize");
                       target.classList.toggle("iconize2");
                   }, false);
@@ -141,9 +158,9 @@
                       document.getElementById('marker_info').innerHTML = html;
                   }
 
-
-
-
+                  function addVisited() {
+                      visited += 1;
+                  }
 
               </script>
             </div>

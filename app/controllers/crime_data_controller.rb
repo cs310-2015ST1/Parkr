@@ -49,7 +49,7 @@ class CrimeDataController < ApplicationController
 
     addresses = Array.new
 
-    csv_text = File.read(file)
+    csv_text = File.read(File.expand_path('app/assets/sources/crime_2014.csv'))
     csv = CSV.parse(csv_text, :headers => true)
     csv.each do |row|
       #save addresses to an array

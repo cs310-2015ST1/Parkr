@@ -8,6 +8,22 @@ class ElectricVehiclesController < ApplicationController
   # GET /electric_vehicles.json
   def index
     @electric_vehicles = ElectricVehicle.all
+    @json = ElectricVehicle.all.to_gmaps4rails
+    respond_to do |format|
+      format.html
+      format.json {render json: @electric_vehicles}
+    end
+
+    @evs = Gmaps4rails.build_markers(@electric_vehicles) do |ev, ev_marker|
+      @ev = ev
+      ev_marker.lat ev.lat
+      ev_marker.lng ev.lon
+      ev_marker.picture ({
+                         url: "#{view_context.image_path("EV.png") }",
+                         width: "44",
+                         height: "58"
+                     })
+    end
   end
 
   # GET /electric_vehicles/1
@@ -45,15 +61,14 @@ class ElectricVehiclesController < ApplicationController
 
     require 'csv'
 
-    csv_text = File.read(file)
+    csv_text = File.read(File.expand_path('app/assets/sources/electric_vehicle_charging_stations.csv'))
     csv = CSV.parse(csv_text, :headers =>true)
     csv.each do |row|
-      ev_lat = row[0].to_f
-      ev_lon = row[1].to_f
+      ev = ElectricVehicle.new
+      ev.lat = row[0].to_f
+      ev.lon = row[1].to_f
 
-      puts ev_lat, ev_lon
-
-      ev = ElectricVehicle.new(ev_lat, ev_lon)
+      puts ev.lat, ev.lon
 
       if ev.save!
         puts "EV save successful"
