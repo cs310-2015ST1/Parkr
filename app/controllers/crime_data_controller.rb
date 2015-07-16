@@ -31,12 +31,12 @@ class CrimeDataController < ApplicationController
 
   # POST /crime_data
   # POST /crime_data.json
-  def self.pull
+  def self.pull(csv_file, local_file)
 
-    file = File.expand_path('app/assets/sources/crime_2014.csv')
+    file = File.expand_path(local_file)
 
 #open csv and save locally
-    open("ftp://webftp.vancouver.ca/opendata/csv/crime_2014.csv") do |ftp|
+    open(csv_file) do |ftp|
       open(file, 'w') do |file|
        if file.write(ftp.read)
          puts "Crime data pulled and saved successfully"
@@ -45,11 +45,11 @@ class CrimeDataController < ApplicationController
     end
   end
 
-  def self.parse
+  def self.parse(local_file)
 
     addresses = Array.new
 
-    csv_text = File.read(File.expand_path('app/assets/sources/crime_2014.csv'))
+    csv_text = File.read(File.expand_path(local_file))
     csv = CSV.parse(csv_text, :headers => true)
     csv.each do |row|
       #save addresses to an array

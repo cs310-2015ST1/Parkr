@@ -33,4 +33,6 @@ class ParkingMetersControllerTest < ActionController::TestCase
 
     assert_redirected_to parking_meters_path
   end
+
+  test ""
 end

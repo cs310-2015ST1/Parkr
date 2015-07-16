@@ -13,7 +13,8 @@ class ParkingMetersController < ApplicationController
 
     if params[:location].present?
       if current_user
-         current_user.searches.create(location: params[:location], user_id: current_user.oauth_token)
+        current_user.searches.create(location: params[:location], user_id: current_user.oauth_token)
+        SearchSuggestion.seed
       end
       if params[:distance].present?
         @parking_meters  = ParkingMeter.near(params[:location], params[:distance].to_i)
@@ -73,11 +74,9 @@ class ParkingMetersController < ApplicationController
   end
 
 
-  def self.parse
+  def self.parse(file)
 
        require 'nokogiri'
-
-       file = File.open(File.expand_path('app/assets/sources/parking_meter_rates_and_time_limits.kml'))
 
        data = Nokogiri::XML(file)
 
