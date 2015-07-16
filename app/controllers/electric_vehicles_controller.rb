@@ -5,6 +5,22 @@ class ElectricVehiclesController < ApplicationController
   # GET /electric_vehicles.json
   def index
     @electric_vehicles = ElectricVehicle.all
+    @json = ElectricVehicle.all.to_gmaps4rails
+    respond_to do |format|
+      format.html
+      format.json {render json: @electric_vehicles}
+    end
+
+    @evs = Gmaps4rails.build_markers(@electric_vehicles) do |ev, ev_marker|
+      @ev = ev
+      ev_marker.lat ev.lat
+      ev_marker.lng ev.lon
+      ev_marker.picture ({
+                         url: "#{view_context.image_path("EV.png") }",
+                         width: "44",
+                         height: "58"
+                     })
+    end
   end
 
   # GET /electric_vehicles/1

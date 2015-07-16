@@ -40,13 +40,9 @@
           <br><br>
           <li>
             <button onclick="toggleHeatmap()">Toggle Crimemap</button>
-          </li>
-          <li><a href="#"></a>
-
-
-            <!-- TODO insert EV toggle here-->
-
-
+          </li> <br>
+          <li>
+            <button onclick="toggleEVmap()">Toggle EV</button>
           </li>
           <div id="marker_info">
           </div>
@@ -69,24 +65,30 @@
                       handler.getMap().setZoom(15);
                       for (m in markers) {
                           var html = "<table>Rate: "+ m.rate + "</table>";
-
                           bindInfoWindow(m, html);
                       }
-
                   });
 
-                  // Add Crime Heatmap
-                  var pointarray, heatmap;
+                  function toggleEVmap() {
+                      ev_markers = handler.addMarkers(<%=raw @evs.to_json %>);
+                      for (var i=0; i<ev_markers.length;i++){
+                          if (ev_markers[i].getMap() ===null) {
+                              ev_markers[i].setMap(map);
+                          } else{
+                              ev_markers[i].setMap(null);
+                          }
+                      }
+                  }
 
+                  // Add Crime Heatmap
+                  var pointArray, heatmap;
                   var crimes = [];
                   <% for crime in CrimeDatum.find_each %>
                   {
                       crimes.push({location: new google.maps.LatLng(<%=crime.lat%>, <%=crime.lon%>), weight: 5});
                   }
                   <% end %>
-
                   var pointArray = new google.maps.MVCArray(crimes);
-
                   var gradient = [
                       'rgba(0, 255, 255, 0)',
                       'rgba(0, 255, 255, 1)',
@@ -103,26 +105,21 @@
                       'rgba(191, 0, 31, 1)',
                       'rgba(255, 0, 0, 1)'
                   ];
-
                   heatmap = new google.maps.visualization.HeatmapLayer({
                       data: pointArray,
                       radius: 80,
                       opacity: 0.8,
                       gradient: gradient
                   });
-
                   heatmap.setMap(null);
-
                   function toggleHeatmap() {
                       heatmap.setMap(heatmap.getMap() ?  null : handler.getMap());
                   }
-
                   function bindInfoWindow(marker, html) {
                       handler.getMap().event.addListener(marker, 'click', function() {
                           document.getElementById('marker_info').innerHTML = html;
                       });
                   }
-
 
               </script>
             </div>
