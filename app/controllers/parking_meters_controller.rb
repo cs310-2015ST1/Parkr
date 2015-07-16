@@ -211,7 +211,7 @@ Visited: #{pm.visited}<br></p>"
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def parking_meter_params
-      params.require(:parking_meter).permit(:name, :head_type, :time_limit, :rate, :credit, :pay_by_phone, :in_effect, :lat, :lng)
+      params.require(:parking_meter).permit(:name, :head_type, :time_limit, :rate, :pay_by_phone, :in_effect, :lat, :lng)
     end
 
 end

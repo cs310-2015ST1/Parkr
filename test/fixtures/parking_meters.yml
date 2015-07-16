@@ -5,7 +5,6 @@ one:
   head_type: MyString
   time_limit: 1
   rate: MyString
-  credit: MyString
   pay_by_phone: 1
   in_effect: MyString
   lat: 1.5
@@ -16,8 +15,17 @@ two:
   head_type: MyString
   time_limit: 1
   rate: MyString
-  credit: MyString
   pay_by_phone: 1
   in_effect: MyString
   lat: 1.5
   lng: 1.5
+
+three:
+  name: MyString
+  head_type: MyString
+  time_limit: 1
+  rate: MyString
+  in_effect: MyString
+  lat: 1.5
+  lng: 1.5
+

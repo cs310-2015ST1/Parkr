@@ -11,6 +11,7 @@ class CrimeDataControllerTest < ActionController::TestCase
     assert_not_nil assigns(:crime_data)
   end
 
+
   test "should get new" do
     get :new
     assert_response :success
