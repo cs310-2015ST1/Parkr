@@ -101,12 +101,6 @@
                       handler.map.centerOn(<%=@location%>);
                       handler.getMap().setZoom(15);
 
-                      // add call to bindInfoWindow
-
-                      /*for (m in markers) {
-                          var html = "<table>Rate: "+ m.rate + "</table>";
-                          bindInfoWindow(m, html);
-                      }*/
                   });
 
                   function toggleEVmarkers() {
@@ -167,9 +161,6 @@
                       target.classList.toggle("iconize2");
                   }, false);
 
-                  function bindInfoWindow(html) {
-                      document.getElementById('marker_info').innerHTML = html;
-                  }
 
                   function addVisited() {
                       visited += 1;
