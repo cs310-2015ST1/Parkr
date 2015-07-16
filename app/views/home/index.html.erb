@@ -67,13 +67,19 @@
                     });
 
                     //Add EV Charging Stations
-                    /*ev_handler = Gmaps.build('Google');
-                    ev_map = handler.buildMap({provider: {}, internal: {id: 'map'}}, function () {
-                        ev_markers = handler.addMarkers(<%=raw @evs.to_json %>);
-                        ev_handler.getMap().setZoom(5);
-                    });*/
+                    function toggleEVmap() {
+                        /*handler = Gmaps.build('Google');
+                        handler.buildMap({provider: {}, internal: {id: 'map'}}, function () {
+                            markers = handler.addMarkers(<%=raw @evs.to_json %>);
+                            if (markers.getMap() === null) {
+                                    markers.setMap(map);
+                                } else {
+                                    markers.setMap(null);
+                                }
 
 
+                        })*/
+                    }
 
 
                     // Add Crime Heatmap
