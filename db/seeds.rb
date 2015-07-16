@@ -17,6 +17,8 @@ ParkingMetersController.unzip_file(zip_file, source_path)
 
 CrimeDataController.pull
 
+ElectricVehiclesController.pull
+
 ParkingMetersController.parse
 CrimeDataController.parse
 ElectricVehiclesController.parse

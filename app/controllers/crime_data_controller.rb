@@ -26,7 +26,6 @@ class CrimeDataController < ApplicationController
   # POST /crime_data.json
   def self.pull
 
-
     require 'openssl'
     require 'open-uri'
 
@@ -36,7 +35,7 @@ class CrimeDataController < ApplicationController
     open("ftp://webftp.vancouver.ca/opendata/csv/crime_2014.csv") do |ftp|
       open(file, 'w') do |file|
        if file.write(ftp.read)
-         puts "crimes saved successfully"
+         puts "crime data pulled and saved successfully"
        end
       end
     end
