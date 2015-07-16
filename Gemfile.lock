@@ -143,6 +143,7 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rake (10.4.2)
     rdoc (4.2.0)
+    redis (3.0.7)
     rubyzip (1.1.7)
     sass (3.4.16)
     sass-rails (5.0.3)
@@ -197,6 +198,7 @@ DEPENDENCIES
   pg (= 0.17.1)
   rails (= 4.2.1)
   rails_12factor
+  redis (~> 3.0.7)
   sass-rails
   sdoc
   spring

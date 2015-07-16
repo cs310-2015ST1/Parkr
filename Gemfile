@@ -36,6 +36,7 @@ gem 'markable',  :git => 'https://github.com/chrome/markable.git'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'zip-zip'
+gem 'redis', '~> 3.0.7'
 
 group :development, :test do
   gem 'sqlite3', '1.3.10'
