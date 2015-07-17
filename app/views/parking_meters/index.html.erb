@@ -64,9 +64,9 @@
 
                       <% if current_user %>
                           <%if not pm.marked_as? :favorite, :by => @current_user%>
-                            <%= link_to "☆",   favorite_parking_meter_path(id: pm.id, type: "favourite", uid: current_user.id), method: :put %>
+                            <%= link_to image_tag('unclicked-star.png', width:"10%"),   favorite_parking_meter_path(id: pm.id, type: "favourite", uid: current_user.id), method: :put, class: "unclick-star" %>
                               <%else%>
-                             <%= link_to "★", favorite_parking_meter_path(id: pm.id, type: "unfavourite", uid: current_user.id), method: :put %>
+                             <%= link_to image_tag('clicked-star.png', width:"10%"), favorite_parking_meter_path(id: pm.id, type: "unfavourite", uid: current_user.id), method: :put,  class: "click-star"%>
                         <%end%>
                       <% end %> <br>
 
