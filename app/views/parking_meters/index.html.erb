@@ -12,7 +12,7 @@
           <div id="user-widget">
             <br>
             <% if current_user %>
-                Welcome <strong><%= current_user.user_name %></strong>!
+                Welcome <strong><%= current_user.id %></strong>!
                 <%= link_to "Sign out", signout_path, id: "sign_out" %>
             <% else %>
                 <%= image_tag("facebook-2.ico", :alt => "Sign in to Facebook") %>
@@ -42,8 +42,6 @@
             <button onclick="toggleHeatmap()">Toggle Crimemap</button>
           </li>
 
-          <input type = "submit" id="gold_star" name="gold_star"
-                 class="gold_star-button iconize" value="" />
 
           <li>
             <button onclick="toggleEVmarkers()">Toggle EV</button>
@@ -55,12 +53,16 @@
               <% i = 0 %>
               <%if @parking_meters != nil%>
                 <%for pm in @parking_meters%>
-                      <%if pm.marked_as? :favorite, :by => current_user%>
-                        <div class="gold_star-button iconize"><%pm.unmark :favourite, current_user%></div>
-                    <%else%>
-                        <div class="gold_star-button iconize2"><%pm.mark_as :favourite, current_user%></div>
-                    <%end%>
-                      <%= (i = i+1).to_s + "."%>
+
+                      <% if current_user %>
+                          <%if not pm.marked_as? :favorite%>
+                            <%= link_to "☆",   favorite_parking_meter_path(id: pm.id, type: "favourite", uid: current_user.id), method: :put %>
+                              <%else%>
+                             <%= link_to "★", favorite_parking_meter_path(id: pm.id, type: "favourite"), method: :put %>
+                        <%end%>
+                      <% end %>
+
+                  <%= (i = i+1).to_s + "."%>
                       <%= image_tag("parking-meter.png", :width => "11%", :height => "11%") %>
                       <%="Rates: #{pm.rate}"%><br>
                       <%="Time Limit: #{pm.time_limit}"%><br>

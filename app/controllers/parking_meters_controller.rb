@@ -194,6 +194,26 @@ class ParkingMetersController < ApplicationController
     end
   end
 
+  def favorite
+    uid = params[:uid]
+
+    @user = User.find(uid)
+    id =  params[:id]
+    @parking_meter = ParkingMeter.find(id)
+    if  params[:type] == "unfavourite"
+      @user.remove_mark :favorite, [@parking_meter]
+      redirect_to :back, notice: 'unfavourited!'
+
+    elsif params[:type] == "favourite"
+      @user.set_mark :favorite, [@parking_meter]
+      redirect_to :back, notice: 'favourited!'
+    else
+      # Type missing, nothing happens
+      redirect_to :back, notice: 'Nothing happened.'+ @parking_meter.rate
+
+     end
+    end
+
   # DELETE /parking_meters/1
   # DELETE /parking_meters/1.json
   def destroy

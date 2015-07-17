@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   resources :electric_vehicles
-  resources :parking_meters
+  resources :parking_meters do
+    put :favorite, on: :member
+  end
   resources :crime_data
   get 'unzipper/unzip'
   get 'meter_parser/parse'
