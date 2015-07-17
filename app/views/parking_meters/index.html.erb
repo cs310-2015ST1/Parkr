@@ -63,11 +63,11 @@
               <% i = 0 %>
               <%if @parking_meters != nil%>
                 <%for pm in @parking_meters%>
-                    <!--  <%if pm.marked_as? :favorite, :by => current_user%>
-                        <div class="gold_star-button iconize"><%pm.unmark :favorite, current_user%></div>
-                    <%else%>
-                        <div class="gold_star-button iconize2"><%pm.mark_as :favorite, current_user%></div>
-                    <%end%>-->
+                    <!--  <%#if pm.marked_as? :favorite, :by => current_user%>
+                        <div class="gold_star-button iconize"><%#pm.unmark :favorite, current_user%></div>
+                    <%#else%>
+                        <div class="gold_star-button iconize2"><%#pm.mark_as :favorite, current_user%></div>
+                    <%#end%>-->
                       <div style="margin-left:5px; float:left">
                       <%= (i = i+1).to_s + "."%>
                       <img src="http://s1.postimg.org/qlmz0lhln/parking_meter.png" alt="Parking Meter Icon"
