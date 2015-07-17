@@ -45,11 +45,13 @@
           <br>
 
           <li>
-            <button onclick="toggleHeatmap()">Toggle Crimemap</button>
+            <button onclick="toggleHeatmap()">Toggle CrimeMap</button>
           </li>
+<!--
 
           <input type = "submit" id="gold_star" name="gold_star"
                  class="gold_star-button iconize" value="" />
+-->
 
           <li>
             <button onclick="toggleEVmarkers()">Toggle EV</button>
@@ -61,21 +63,27 @@
               <% i = 0 %>
               <%if @parking_meters != nil%>
                 <%for pm in @parking_meters%>
-                      <%if pm.marked_as? :favorite, :by => current_user%>
+                    <!--  <%if pm.marked_as? :favorite, :by => current_user%>
                         <div class="gold_star-button iconize"><%pm.unmark :favorite, current_user%></div>
                     <%else%>
                         <div class="gold_star-button iconize2"><%pm.mark_as :favorite, current_user%></div>
-                    <%end%>
+                    <%end%>-->
+                      <div style="margin-left:5px; float:left">
                       <%= (i = i+1).to_s + "."%>
-                      <%= image_tag("parking-meter.png", :width => "11%", :height => "11%") %>
-                      <%="Rates: #{pm.rate}"%><br>
+                      <img src="http://s1.postimg.org/qlmz0lhln/parking_meter.png" alt="Parking Meter Icon"
+                           style="cursor:pointer; width:50%" onclick="panAndZoom(<%=pm.lat%>,<%=pm.lng%>)"/>
+                      </div>
+                    <div>
+                      <%="Rate: #{pm.rate}"%><br>
                       <%="Time Limit: #{pm.time_limit}"%><br>
                       <%="Type: #{pm.head_type}"%><br>
                       <%="Pay By Phone: #{pm.pay_by_phone}"%><br>
                       <%="In Effect: #{pm.in_effect}"%><br>
                       <%="Visitors: #{pm.visited}"%><br>
                       <button type="button", onclick="addVisited()">Visited</button>
-                      <br>
+                      <br><br>
+                    </div>
+
                 <%end%>
               <%else%>
                   No Parking Meters Present
@@ -160,6 +168,11 @@
                       target.classList.toggle("iconize");
                       target.classList.toggle("iconize2");
                   }, false);
+
+                  function panAndZoom(lat,lng){
+                      handler.getMap().panTo(new google.maps.LatLng(lat,lng));
+                      handler.getMap().setZoom(22)
+                  }
 
 
                   function addVisited() {
