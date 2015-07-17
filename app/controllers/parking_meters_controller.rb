@@ -1,12 +1,21 @@
 class ParkingMetersController < ApplicationController
   before_action :set_parking_meter, only: [:show, :edit, :update, :destroy]
 
+
+  require 'rubygems'
+  require 'zip/zip'
+  require 'openssl'
+
   # GET /parking_meters
   # GET /parking_meters.json
 
   def index
 
     if params[:location].present?
+      if current_user
+        current_user.searches.create(location: params[:location], user_id: current_user.oauth_token)
+        #SearchSuggestion.seed
+      end
       if params[:distance].present?
         @parking_meters  = ParkingMeter.near(params[:location], params[:distance].to_i)
       else
@@ -45,20 +54,10 @@ class ParkingMetersController < ApplicationController
                          width: "44",
                          height: "58"
                      })
-
-
     end
-
-
   end
 
 
-  # GET /parking_meters/1
-  # GET /parking_meters/1.json
-
-  require 'rubygems'
-  require 'zip/zip'
-  require 'openssl'
 
 
   # Pull remote KML file, unzip, and store locally
@@ -70,16 +69,14 @@ class ParkingMetersController < ApplicationController
         FileUtils.mkdir_p(File.dirname(f_path))
         zip_file.extract(f, f_path){true}
       }
-      puts "parking meters successfully extracted"
+      puts "Parking meters pulled and saved successfully"
     }
   end
 
 
-  def self.parse
+  def self.parse(file)
 
        require 'nokogiri'
-
-       file = File.open(File.expand_path('app/assets/sources/parking_meter_rates_and_time_limits.kml'))
 
        data = Nokogiri::XML(file)
 

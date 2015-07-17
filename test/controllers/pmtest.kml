@@ -1,0 +1,506 @@
+<Folder id="Parking_Meter_Test_KML">
+<Placemark id="1943">
+<name>65192</name>
+<description>&lt;br&gt;Meter Head Type: Single&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $3.00&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 65192</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_7</styleUrl>
+<Point>
+  <coordinates>-123.106670480264,49.2834540339571,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="1944">
+<name>62051</name>
+<description>&lt;br&gt;Meter Head Type: Twin&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $3.00&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 62051</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_7</styleUrl>
+<Point>
+  <coordinates>-123.106732972818,49.2833066622693,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="1945">
+<name>62162</name>
+<description>&lt;br&gt;Meter Head Type: Twin&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $3.00&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 62162</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_7</styleUrl>
+<Point>
+  <coordinates>-123.106732972818,49.2833066622693,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="1946">
+<name>61033</name>
+<description>&lt;br&gt;Meter Head Type: Twin&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $3.00&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 61033</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_7</styleUrl>
+<Point>
+  <coordinates>-123.106780978344,49.283193863396,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="1947">
+<name>63051</name>
+<description>&lt;br&gt;Meter Head Type: Twin&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $3.00&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 63051</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_7</styleUrl>
+<Point>
+  <coordinates>-123.106780978344,49.283193863396,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="1948">
+<name>62024</name>
+<description>&lt;br&gt;Meter Head Type: Single&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $3.00&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 62024</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_7</styleUrl>
+<Point>
+  <coordinates>-123.106825932342,49.2830879846115,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="1949">
+<name>63123</name>
+<description>&lt;br&gt;Meter Head Type: Single&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $3.00&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 63123</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_7</styleUrl>
+<Point>
+  <coordinates>-123.106760403913,49.2827714869466,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="1950">
+<name>63630</name>
+<description>&lt;br&gt;Meter Head Type: Twin&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $3.00&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 63630</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_7</styleUrl>
+<Point>
+  <coordinates>-123.106811531788,49.2826531081558,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="1951">
+<name>63095</name>
+<description>&lt;br&gt;Meter Head Type: Twin&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $3.00&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 63095</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_7</styleUrl>
+<Point>
+  <coordinates>-123.106811531788,49.2826531081558,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="1952">
+<name>63574</name>
+<description>&lt;br&gt;Meter Head Type: Single&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $3.00&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 63574</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_7</styleUrl>
+<Point>
+  <coordinates>-123.106913678304,49.2824106836388,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="1953">
+<name>63067</name>
+<description>&lt;br&gt;Meter Head Type: Twin&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $3.00&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 63067</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_7</styleUrl>
+<Point>
+  <coordinates>-123.106962216342,49.2822967507872,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="1954">
+<name>62248</name>
+<description>&lt;br&gt;Meter Head Type: Twin&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $3.00&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 62248</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_7</styleUrl>
+<Point>
+  <coordinates>-123.106962216342,49.2822967507872,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="1955">
+<name>62220</name>
+<description>&lt;br&gt;Meter Head Type: Twin&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $3.00&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 62220</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_7</styleUrl>
+<Point>
+  <coordinates>-123.107009918379,49.2821841859541,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="1956">
+<name>62192</name>
+<description>&lt;br&gt;Meter Head Type: Twin&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $3.00&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 62192</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_7</styleUrl>
+<Point>
+  <coordinates>-123.107009918379,49.2821841859541,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="1957">
+<name>62052</name>
+<description>&lt;br&gt;Meter Head Type: Twin&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $3.00&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 62052</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_7</styleUrl>
+<Point>
+  <coordinates>-123.106969495244,49.2827441551293,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="1958">
+<name>62917</name>
+<description>&lt;br&gt;Meter Head Type: Twin&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $2.50&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 62917</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_8</styleUrl>
+<Point>
+  <coordinates>-123.11509836659,49.2793069770652,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="1960">
+<name>65216</name>
+<description>&lt;br&gt;Meter Head Type: Twin&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $2.50&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 65216</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_8</styleUrl>
+<Point>
+  <coordinates>-123.115219858115,49.2792267089145,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="1961">
+<name>65757</name>
+<description>&lt;br&gt;Meter Head Type: Twin&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $2.50&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 65757</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_8</styleUrl>
+<Point>
+  <coordinates>-123.115219858115,49.2792267089145,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="1962">
+<name>65998</name>
+<description>&lt;br&gt;Meter Head Type: Twin&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $2.50&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 65998</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_8</styleUrl>
+<Point>
+  <coordinates>-123.115341625064,49.2791468001672,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="1963">
+<name>65405</name>
+<description>&lt;br&gt;Meter Head Type: Twin&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $2.50&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 65405</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_8</styleUrl>
+<Point>
+  <coordinates>-123.115341625064,49.2791468001672,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="1964">
+<name>60376</name>
+<description>&lt;br&gt;Meter Head Type: Twin&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $2.50&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 60376</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_8</styleUrl>
+<Point>
+  <coordinates>-123.114903682264,49.2795916074607,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="1965">
+<name>64378</name>
+<description>&lt;br&gt;Meter Head Type: Twin&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $2.50&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 64378</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_8</styleUrl>
+<Point>
+  <coordinates>-123.114903682264,49.2795916074607,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="1967">
+<name>62972</name>
+<description>&lt;br&gt;Meter Head Type: Twin&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $2.50&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 62972</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_8</styleUrl>
+<Point>
+  <coordinates>-123.115032392598,49.2795052335997,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="1968">
+<name>62848</name>
+<description>&lt;br&gt;Meter Head Type: Twin&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $2.50&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 62848</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_8</styleUrl>
+<Point>
+  <coordinates>-123.115283860512,49.2793392017881,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="1969">
+<name>62951</name>
+<description>&lt;br&gt;Meter Head Type: Twin&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $2.50&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 62951</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_8</styleUrl>
+<Point>
+  <coordinates>-123.115283860512,49.2793392017881,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="1970">
+<name>61273</name>
+<description>&lt;br&gt;Meter Head Type: Twin&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $2.50&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 61273</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_8</styleUrl>
+<Point>
+  <coordinates>-123.115409620599,49.2792558708176,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="1971">
+<name>62852</name>
+<description>&lt;br&gt;Meter Head Type: Twin&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $2.50&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 62852</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_8</styleUrl>
+<Point>
+  <coordinates>-123.115409620599,49.2792558708176,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="1972">
+<name>61333</name>
+<description>&lt;br&gt;Meter Head Type: Twin&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $2.50&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 61333</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_8</styleUrl>
+<Point>
+  <coordinates>-123.115758977349,49.2790248039325,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="1974">
+<name>62184</name>
+<description>&lt;br&gt;Meter Head Type: Twin&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $2.50&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 62184</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_8</styleUrl>
+<Point>
+  <coordinates>-123.116089383161,49.2786523957246,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="1975">
+<name>62130</name>
+<description>&lt;br&gt;Meter Head Type: Twin&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $2.50&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 62130</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_8</styleUrl>
+<Point>
+  <coordinates>-123.116089383161,49.2786523957246,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="1976">
+<name>63767</name>
+<description>&lt;br&gt;Meter Head Type: Twin&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $2.50&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 63767</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_8</styleUrl>
+<Point>
+  <coordinates>-123.116212641614,49.2785706585301,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="1977">
+<name>63544</name>
+<description>&lt;br&gt;Meter Head Type: Twin&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $2.50&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 63544</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_8</styleUrl>
+<Point>
+  <coordinates>-123.116212641614,49.2785706585301,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="1978">
+<name>63572</name>
+<description>&lt;br&gt;Meter Head Type: Twin&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $2.50&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 63572</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_8</styleUrl>
+<Point>
+  <coordinates>-123.116337669754,49.2784874352158,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="1980">
+<name>62102</name>
+<description>&lt;br&gt;Meter Head Type: Twin&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $2.50&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 62102</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_8</styleUrl>
+<Point>
+  <coordinates>-123.116456632238,49.2784091832196,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="1981">
+<name>62158</name>
+<description>&lt;br&gt;Meter Head Type: Twin&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $2.50&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 62158</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_8</styleUrl>
+<Point>
+  <coordinates>-123.116456632238,49.2784091832196,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="1982">
+<name>62213</name>
+<description>&lt;br&gt;Meter Head Type: Twin&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $2.50&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 62213</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_8</styleUrl>
+<Point>
+  <coordinates>-123.11676635941,49.2782035106084,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="1983">
+<name>62101</name>
+<description>&lt;br&gt;Meter Head Type: Twin&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $2.50&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 62101</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_8</styleUrl>
+<Point>
+  <coordinates>-123.11676635941,49.2782035106084,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="1984">
+<name>64128</name>
+<description>&lt;br&gt;Meter Head Type: Twin&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $2.50&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 64128</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_8</styleUrl>
+<Point>
+  <coordinates>-123.116192923325,49.2787393020581,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="1986">
+<name>64242</name>
+<description>&lt;br&gt;Meter Head Type: Twin&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $2.50&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 64242</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_8</styleUrl>
+<Point>
+  <coordinates>-123.116313834632,49.2786592042404,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="1987">
+<name>64268</name>
+<description>&lt;br&gt;Meter Head Type: Twin&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $2.50&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 64268</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_8</styleUrl>
+<Point>
+  <coordinates>-123.116313834632,49.2786592042404,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="1988">
+<name>64044</name>
+<description>&lt;br&gt;Meter Head Type: Twin&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $2.50&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 64044</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_8</styleUrl>
+<Point>
+  <coordinates>-123.116530123515,49.2785160438662,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="1989">
+<name>61264</name>
+<description>&lt;br&gt;Meter Head Type: Twin&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $2.50&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 61264</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_8</styleUrl>
+<Point>
+  <coordinates>-123.113343818507,49.2831890965904,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="1990">
+<name>63220</name>
+<description>&lt;br&gt;Meter Head Type: Twin&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $2.50&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 63220</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_8</styleUrl>
+<Point>
+  <coordinates>-123.113343818507,49.2831890965904,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="1991">
+<name>62033</name>
+<description>&lt;br&gt;Meter Head Type: Twin&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $2.50&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 62033</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_8</styleUrl>
+<Point>
+  <coordinates>-123.113549822718,49.2830516909246,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="1993">
+<name>61036</name>
+<description>&lt;br&gt;Meter Head Type: Twin&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $2.50&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 61036</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_8</styleUrl>
+<Point>
+  <coordinates>-123.113679028517,49.2829665594733,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="1994">
+<name>64812</name>
+<description>&lt;br&gt;Meter Head Type: Twin&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $2.50&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 64812</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_8</styleUrl>
+<Point>
+  <coordinates>-123.113679028517,49.2829665594733,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="1995">
+<name>61488</name>
+<description>&lt;br&gt;Meter Head Type: Twin&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $2.50&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 61488</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_8</styleUrl>
+<Point>
+  <coordinates>-123.113975633166,49.2827711349403,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="1996">
+<name>63035</name>
+<description>&lt;br&gt;Meter Head Type: Twin&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $2.50&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 63035</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_8</styleUrl>
+<Point>
+  <coordinates>-123.113975633166,49.2827711349403,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="1997">
+<name>65036</name>
+<description>&lt;br&gt;Meter Head Type: Twin&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $2.50&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 65036</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_8</styleUrl>
+<Point>
+  <coordinates>-123.114097299413,49.2826906069884,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="1999">
+<name>63232</name>
+<description>&lt;br&gt;Meter Head Type: Twin&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $3.00&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 63232</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_7</styleUrl>
+<Point>
+  <coordinates>-123.115161473475,49.2819873428174,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="2000">
+<name>63094</name>
+<description>&lt;br&gt;Meter Head Type: Twin&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $3.00&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 63094</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_7</styleUrl>
+<Point>
+  <coordinates>-123.115161473475,49.2819873428174,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="2001">
+<name>63233</name>
+<description>&lt;br&gt;Meter Head Type: Single&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $3.00&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 63233</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_7</styleUrl>
+<Point>
+  <coordinates>-123.115266152337,49.2819174808421,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="2002">
+<name>60038</name>
+<description>&lt;br&gt;Meter Head Type: Twin&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $3.00&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 60038</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_7</styleUrl>
+<Point>
+  <coordinates>-123.11633200013,49.2810104902985,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="2003">
+<name>60720</name>
+<description>&lt;br&gt;Meter Head Type: Twin&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $3.00&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 60720</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_7</styleUrl>
+<Point>
+  <coordinates>-123.11633200013,49.2810104902985,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="2005">
+<name>62079</name>
+<description>&lt;br&gt;Meter Head Type: Twin&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $3.00&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 62079</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_7</styleUrl>
+<Point>
+  <coordinates>-123.107017600646,49.2826335328866,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="2008">
+<name>62164</name>
+<description>&lt;br&gt;Meter Head Type: Single&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $2.00&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 62164</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_6</styleUrl>
+<Point>
+  <coordinates>-123.107166459333,49.2818223537979,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="2009">
+<name>63546</name>
+<description>&lt;br&gt;Meter Head Type: Twin&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $2.00&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 63546</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_6</styleUrl>
+<Point>
+  <coordinates>-123.107207108408,49.2817231802391,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="2011">
+<name>63041</name>
+<description>&lt;br&gt;Meter Head Type: Twin&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $2.00&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 63041</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_6</styleUrl>
+<Point>
+  <coordinates>-123.10725367382,49.2816195845407,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="2012">
+<name>62219</name>
+<description>&lt;br&gt;Meter Head Type: Twin&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $2.00&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 62219</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_6</styleUrl>
+<Point>
+  <coordinates>-123.10725367382,49.2816195845407,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="2014">
+<name>62135</name>
+<description>&lt;br&gt;Meter Head Type: Twin&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $2.00&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 62135</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_6</styleUrl>
+<Point>
+  <coordinates>-123.107374175074,49.2818030192314,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="2015">
+<name>62080</name>
+<description>&lt;br&gt;Meter Head Type: Twin&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $2.00&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 62080</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_6</styleUrl>
+<Point>
+  <coordinates>-123.107374175074,49.2818030192314,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="2017">
+<name>62247</name>
+<description>&lt;br&gt;Meter Head Type: Twin&lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $2.00&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 62247</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_6</styleUrl>
+<Point>
+  <coordinates>-123.107416921353,49.2817010551446,0 </coordinates>
+</Point>
+</Placemark>
+<Placemark id="test">
+<name>65192</name>
+<description>&lt;br&gt;Meter Head Type: &lt;br&gt;Time Limit: 2 Hr&lt;br&gt;Rate: $3.00&lt;br&gt;Credit Card Enabled: CREDIT_CARD&lt;br&gt;Time in Effect: METER IN EFFECT: 9:00 AM TO 10:00 PM&lt;br&gt;Pay by Phone Number: 65192</description>
+<styleUrl>#ParkingMeterStyler_KMLStyler_7</styleUrl>
+<Point>
+<coordinates>-123.106670480264,30.2834540339571,0 </coordinates>
+</Point>
+</Placemark>
+</Folder>

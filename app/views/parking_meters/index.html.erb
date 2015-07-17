@@ -12,43 +12,51 @@
           <div id="user-widget">
             <br>
             <% if current_user %>
-                Welcome <strong><%= current_user.id %></strong>!
+                <%@current_user = current_user%>
+                Welcome <strong><%= current_user.user_name %></strong>!
+
                 <%= link_to "Sign out", signout_path, id: "sign_out" %>
             <% else %>
+                <%@current_user = nil%>
                 <%= image_tag("facebook-2.ico", :alt => "Sign in to Facebook") %>
                 <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
             <% end %>
           </div>
-          <div class="space"></div>
+          <br>
         </li>
         <center>
+          <form class="search-form">
           <%= form_tag parking_meters_path, method: :get do %>
               <%= label :location, "Parking meters near:\n " %><br>
               <%= text_field_tag :location, params[:location] %><br>
               <br>
               <%= label :distance, "Distance (km):\n " %><br>
               <%= text_field_tag :distance, params[:distance] %><br>
+              <br>
 
 
               <!-- TODO insert rate filter -->
 
 
-              <br>
               <%= submit_tag "Search" %>
-              </center>
-          <% end %>
+
+              <%end%>
+            </form>
+        </center>
           <br>
+
           <li>
-            <button onclick="toggleHeatmap()">Toggle Crimemap</button>
+            <button onclick="toggleHeatmap()">CrimeMap</button>
+            <button onclick="toggleEVmarkers()">EV Stations</button>
           </li>
 
 
           <li>
-            <button onclick="toggleEVmarkers()">Toggle EV</button>
+
 
           </li>
           <br>
-          <li id="marker_info" style="width: 90%; height: 50% ; text-align: center; background: #FFFFFF; border:1px solid #000000; overflow:auto";>
+          <li id="marker_info" style="width: 90%; height: 60% ; text-align: center; background: #FFFFFF; border:1px solid #000000; overflow:auto";>
             <p>
               <% i = 0 %>
               <%if @parking_meters != nil%>
@@ -60,21 +68,28 @@
                               <%else%>
                              <%= link_to "★", favorite_parking_meter_path(id: pm.id, type: "favourite"), method: :put %>
                         <%end%>
-                      <% end %>
+                      <% end %> <br>
 
-                  <%= (i = i+1).to_s + "."%>
-                      <%= image_tag("parking-meter.png", :width => "11%", :height => "11%") %>
-                      <%="Rates: #{pm.rate}"%><br>
+
+                      <div style="margin-left:5px; float:left">
+                      <%= (i = i+1).to_s + "."%>
+                      <img src="http://s1.postimg.org/qlmz0lhln/parking_meter.png" alt="Parking Meter Icon"
+                           style="cursor:pointer; width:50%" onclick="panAndZoom(<%=pm.lat%>,<%=pm.lng%>)"/>
+                      </div>
+                    <div>
+                      <%="Rate: #{pm.rate}"%><br>
                       <%="Time Limit: #{pm.time_limit}"%><br>
                       <%="Type: #{pm.head_type}"%><br>
                       <%="Pay By Phone: #{pm.pay_by_phone}"%><br>
                       <%="In Effect: #{pm.in_effect}"%><br>
                       <%="Visitors: #{pm.visited}"%><br>
                       <button type="button", onclick="addVisited()">Visited</button>
-                      <br>
+                      <br><br>
+                    </div>
+
                 <%end%>
               <%else%>
-                  No Parking Meters
+                  No Parking Meters Present
               <%end%>
             </p>
           </li><br>
@@ -85,10 +100,12 @@
         <div class="container">
           <div class="row">
             <div class="col-md-12">
-            <h1>
-              <%= image_tag("parkr.png", :width => "20%", :height => "20%") %>
-            </h1>
-            <div id="map" style='width: 100%; height: 530px;'>
+              <%= link_to image_tag("parkr.png", :width => "20%", :height => "20%"), parking_meters_path, {class: "logo"} %>
+              <br>
+              <h3>
+              <%=link_to "About Us", "/page/about"%>
+              </h3>
+            <div id="map" style='width: 100%; height: 500px;'>
               <script defer type="text/javascript">
 
                   handler = Gmaps.build('Google', { markers: { clusterer: { maxZoom: 18, gridSize: 100 }}});
@@ -97,12 +114,6 @@
                       handler.map.centerOn(<%=@location%>);
                       handler.getMap().setZoom(15);
 
-                      // add call to bindInfoWindow
-
-                      /*for (m in markers) {
-                          var html = "<table>Rate: "+ m.rate + "</table>";
-                          bindInfoWindow(m, html);
-                      }*/
                   });
 
                   function toggleEVmarkers() {
@@ -117,7 +128,6 @@
 
                       })*/
                   }
-
 
                   // Add Crime Heatmap
                   var pointArray, heatmap;
@@ -164,9 +174,11 @@
                       target.classList.toggle("iconize2");
                   }, false);
 
-                  function bindInfoWindow(html) {
-                      document.getElementById('marker_info').innerHTML = html;
+                  function panAndZoom(lat,lng){
+                      handler.getMap().panTo(new google.maps.LatLng(lat,lng));
+                      handler.getMap().setZoom(22)
                   }
+
 
                   function addVisited() {
                       visited += 1;

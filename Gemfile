@@ -15,7 +15,7 @@ gem 'coffee-rails'
 # gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
-gem 'jquery-rails'
+gem 'jquery-rails', "~> 2.3.0"
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -36,6 +36,7 @@ gem 'markable',  :git => 'https://github.com/chrome/markable.git'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'zip-zip'
+gem 'redis', '~> 3.0.7'
 
 group :development, :test do
   gem 'sqlite3', '1.3.10'

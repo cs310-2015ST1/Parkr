@@ -1,0 +1,57 @@
+
+<html>
+<body style="background-color:#FFFFFF">
+<center>
+    <div id="page-content-wrapper">
+      <div class="page-content">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h1>
+                <%= link_to image_tag("parkr.png", :width => "20%", :height => "20%"), parking_meters_path, {class: "logo"} %>
+              </h1>
+              <h3>
+              <%=link_to "Home", parking_meters_path%>
+              </h3>
+              <h2>
+                Parkr is..
+              </h2>
+              <p>
+                ..an online parking planner for the city of Vancouver, here to help you plan ahead. You can search for parking meters within
+                a given radius around your intended location, and view information that matters to you, like rates, time limits,
+                and times in-effect. Additionally, you can see all locations of auto-related crime that has occurred over the most
+                current year, so that you can avoid areas known for break-ins and feel more at ease.
+              </p>
+              <h2>
+                We are..
+              </h2>
+              <p>
+                ..a team of 3 UBC Undergrads studying Computer Science who created this website as a project for our CPSC 310
+                class. The assignment was to create a web app that pulled and utilized information from a local database.
+                For Parkr, we used parking meter, auto-related crime, and electric vehicle charging stations data from the
+                City Of Vancouver.
+              </p>
+              <h3>
+                Database Credits
+              </h3>
+              <li>
+                <a href="http://data.vancouver.ca/datacatalogue/parkingMeter.htm" target="_blank">Parking Meters</a>
+              </li>
+              <li>
+                <a href="http://data.vancouver.ca/datacatalogue/crime-data.htm" target="_blank">Crime</a>
+              </li>
+              <li>
+                <a href="http://data.vancouver.ca/datacatalogue/electricVehicleChargingStations.htm" target="_blank">EV Stations</a>
+              </li>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</center>
+
+</body>
+</html>
