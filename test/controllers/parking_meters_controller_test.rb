@@ -3,7 +3,6 @@ require 'test_helper'
 class ParkingMetersControllerTest < ActionController::TestCase
   setup do
     @parking_meter = parking_meters(:one)
-    @pm3 = parking_meters(:three)
   end
 
   test "should get index" do

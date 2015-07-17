@@ -25,6 +25,7 @@ three:
   head_type: MyString
   time_limit: 1
   rate: MyString
+  pay_by_phone:
   in_effect: MyString
   lat: 1.5
   lng: 1.5
