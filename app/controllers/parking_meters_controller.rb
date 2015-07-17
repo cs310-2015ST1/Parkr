@@ -199,16 +199,16 @@ class ParkingMetersController < ApplicationController
     @parking_meter = ParkingMeter.find(id)
     if  params[:type] == "unfavourite"
       @user.remove_mark :favorite, [@parking_meter]
-      redirect_to :back, notice: 'unfavourited!'
+      redirect_to :back
 
     elsif params[:type] == "favourite"
       @user.set_mark :favorite, [@parking_meter]
-      redirect_to :back, notice: 'favourited!'
+      redirect_to :back
     else
       # Type missing, nothing happens
-      redirect_to :back, notice: 'Nothing happened.'+ @parking_meter.rate
+      redirect_to :back
 
-     end
+  end
     end
 
   # DELETE /parking_meters/1

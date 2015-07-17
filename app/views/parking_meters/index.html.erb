@@ -63,10 +63,10 @@
                 <%for pm in @parking_meters%>
 
                       <% if current_user %>
-                          <%if not pm.marked_as? :favorite%>
+                          <%if not pm.marked_as? :favorite, :by => @current_user%>
                             <%= link_to "☆",   favorite_parking_meter_path(id: pm.id, type: "favourite", uid: current_user.id), method: :put %>
                               <%else%>
-                             <%= link_to "★", favorite_parking_meter_path(id: pm.id, type: "favourite"), method: :put %>
+                             <%= link_to "★", favorite_parking_meter_path(id: pm.id, type: "unfavourite", uid: current_user.id), method: :put %>
                         <%end%>
                       <% end %> <br>
 
