@@ -54,9 +54,12 @@ class CrimeDataController < ApplicationController
     csv.each do |row|
       #save addresses to an array
       if /\w*Auto\w*/.match(row[0])
+        if /#{Time.now.year - 1}/.match(row[1])
         addresses<< row[3]
+        end
       end
     end
+
 
 #if array is not NULL, replace 'xx' in address with '00' for geocoding
 

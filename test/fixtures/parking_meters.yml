@@ -1,8 +1,8 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  head_type: MyString
+  name: tester1
+  head_type: Single
   time_limit: 1
   rate: MyString
   pay_by_phone: 1
@@ -11,8 +11,7 @@ one:
   lng: 1.5
 
 two:
-  name: MyString
-  head_type: MyString
+  name: tester2
   time_limit: 1
   rate: MyString
   pay_by_phone: 1
@@ -21,7 +20,7 @@ two:
   lng: 1.5
 
 three:
-  name: MyString
+  name: tester3
   head_type: MyString
   time_limit: 1
   rate: MyString
