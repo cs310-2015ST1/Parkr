@@ -25,7 +25,7 @@
         </li>
         <center>
           <form class="search-form">
-          <%= form_tag search_suggestions_path, method: :get do %>
+          <%= form_tag parking_meters_path, method: :get do %>
               <%= label :location, "Parking meters near:\n " %><br>
               <%= text_field_tag :location, params[:location] %><br>
               <br>

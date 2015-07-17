@@ -1,4 +1,5 @@
 class SearchSuggestion
+=begin
   def self.seed
     Search.find_each do |s|
       location = s.location
@@ -12,4 +13,5 @@ class SearchSuggestion
   def self.terms_for(prefix)
     $redis.zrevrange "search-suggestions:#{prefix.downcase}", 0, 9
   end
+=end
 end
