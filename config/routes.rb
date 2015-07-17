@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :electric_vehicles
   resources :parking_meters
   resources :crime_data
+
   get 'unzipper/unzip'
   get 'meter_parser/parse'
   get 'electric_vehicle_parser/parse'
@@ -18,6 +19,9 @@ Rails.application.routes.draw do
   match 'auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
   match 'auth/failure', to: redirect('/'), via: [:get, :post]
   match 'signout', to: 'sessions#destroy', as: 'signout', via: [:get, :post]
+  get '/home' => 'page#home'
+  get '/about' => 'page#about'
+  get '/contact' => 'page#contact'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

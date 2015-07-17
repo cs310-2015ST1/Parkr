@@ -45,7 +45,8 @@
           <br>
 
           <li>
-            <button onclick="toggleHeatmap()">Toggle CrimeMap</button>
+            <button onclick="toggleHeatmap()">CrimeMap</button>
+            <button onclick="toggleEVmarkers()">EV Stations</button>
           </li>
 <!--
 
@@ -54,11 +55,11 @@
 -->
 
           <li>
-            <button onclick="toggleEVmarkers()">Toggle EV</button>
+
 
           </li>
           <br>
-          <li id="marker_info" style="width: 90%; height: 50% ; text-align: center; background: #FFFFFF; border:1px solid #000000; overflow:auto";>
+          <li id="marker_info" style="width: 90%; height: 60% ; text-align: center; background: #FFFFFF; border:1px solid #000000; overflow:auto";>
             <p>
               <% i = 0 %>
               <%if @parking_meters != nil%>
@@ -97,9 +98,12 @@
         <div class="container">
           <div class="row">
             <div class="col-md-12">
-            <h1>
               <%= link_to image_tag("parkr.png", :width => "20%", :height => "20%"), parking_meters_path, {class: "logo"} %>
-            </h1>
+              <br>
+              <h5>
+              <%=link_to "About Us", "/about"%>
+                <%=link_to "Contact", "/contact"%>
+              </h5>
             <div id="map" style='width: 100%; height: 500px;'>
               <script defer type="text/javascript">
 
