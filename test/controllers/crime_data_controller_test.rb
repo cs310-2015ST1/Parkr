@@ -3,6 +3,8 @@ require 'test_helper'
 class CrimeDataControllerTest < ActionController::TestCase
   setup do
     @crime_datum = crime_data(:one)
+    f = 'app/assets/sources/crime_test.csv'
+    CrimeDataController.parse(f)
   end
 
   test "should get index" do
@@ -46,5 +48,13 @@ class CrimeDataControllerTest < ActionController::TestCase
     end
 
     assert_redirected_to crime_data_path
+  end
+
+  test "should only have 49.* lats and -123.* lons" do
+    crimes = CrimeDatum.all
+    for c in crimes do
+      assert_match(/49\.\d+/, c.lat, "lat issue")
+      assert_match(/-123\.\d+/, c.lon, "lon issue")
+    end
   end
 end
