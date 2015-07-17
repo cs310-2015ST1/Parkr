@@ -14,7 +14,6 @@ class ParkingMetersControllerTest < ActionController::TestCase
   test "should create parking_meter" do
     assert_difference('ParkingMeter.count') do
       post :create, parking_meter: { head_type: @parking_meter.head_type, in_effect: @parking_meter.in_effect, lat: @parking_meter.lat, lng: @parking_meter.lng, name: @parking_meter.name, pay_by_phone: @parking_meter.pay_by_phone, rate: @parking_meter.rate, time_limit: @parking_meter.time_limit }
-      post :create, parking_meter: { head_type: @pm3.head_type, in_effect: @pm3.in_effect, lat: @pm3.lat, lng: @pm3.lng, name: @pm3.name, pay_by_phone: @pm3.pay_by_phone, rate: @pm3.rate, time_limit: @pm3.time_limit }
     end
 
     assert_redirected_to parking_meter_path(assigns(:parking_meter))
@@ -34,5 +33,10 @@ class ParkingMetersControllerTest < ActionController::TestCase
     assert_redirected_to parking_meters_path
   end
 
-  test ""
+  test "should parse test file" do
+    test = "/pmtest.kml"
+    ParkingMetersController.parse(test)
+    assert_response :success
+  end
+
 end

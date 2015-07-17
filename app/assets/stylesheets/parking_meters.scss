@@ -3,6 +3,11 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .space { margin-top: 50px; }
 
+.logo:hover{
+  background-color: transparent;
+  color: #34DDDD;
+  text-decoration: transparent;
+}
 
 #wrapper {
   height: 100%;

@@ -90,7 +90,7 @@
           <div class="row">
             <div class="col-md-12">
             <h1>
-              <%= image_tag("parkr.png", :width => "20%", :height => "20%") %>
+              <%= link_to image_tag("parkr.png", :width => "20%", :height => "20%"), parking_meters_path, {class: "logo"} %>
             </h1>
             <div id="map" style='width: 100%; height: 500px;'>
               <script defer type="text/javascript">
