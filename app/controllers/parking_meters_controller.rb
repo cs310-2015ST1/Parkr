@@ -17,9 +17,63 @@ class ParkingMetersController < ApplicationController
         #SearchSuggestion.seed
       end
       if params[:distance].present?
-        @parking_meters  = ParkingMeter.near(params[:location], params[:distance].to_i)
+        if params[:rate] == ["any"]
+          @parking_meters  = ParkingMeter.near(params[:location], params[:distance].to_i)
+        elsif params[:rate] == ["$1.00"]
+          @parking_meters  = ParkingMeter.near(params[:location], params[:distance].to_i).where("rate = ?", ['$1.00'])
+        elsif params[:rate] == ["$1.50"]
+          @parking_meters  = ParkingMeter.near(params[:location], params[:distance].to_i).where("rate = ?", ['$1.00'|| '$1.50'])
+        elsif params[:rate] == ["$2.00"]
+          @parking_meters  = ParkingMeter.near(params[:location], params[:distance].to_i).where("rate = ?", ['$1.00'|| '$1.50'||'$2.00'])
+        elsif params[:rate] == ["$2.50"]
+          @parking_meters  = ParkingMeter.near(params[:location], params[:distance].to_i).where("rate = ?",  ['$1.00'|| '$1.50'||'$2.00'||'$2.50'])
+        elsif params[:rate] == ["$3.00"]
+          @parking_meters  = ParkingMeter.near(params[:location], params[:distance].to_i).where("rate = ?", ['$1.00'|| '$1.50'||'$2.00'||'$2.50'||'$3.00'])
+        elsif params[:rate] == ["$3.50"]
+          @parking_meters  = ParkingMeter.near(params[:location], params[:distance].to_i).where("rate = ?", ['$1.00'|| '$1.50'||'$2.00'||'$2.50'||'$3.00'||'$3.50'])
+        elsif params[:rate] == ["$4.00"]
+          @parking_meters  = ParkingMeter.near(params[:location], params[:distance].to_i).where("rate = ?", ['$1.00'|| '$1.50'||'$2.00'||'$2.50'||'$3.00'||'$3.50'||'$4.00'])
+        elsif params[:rate] == ["$4.50"]
+          @parking_meters  = ParkingMeter.near(params[:location], params[:distance].to_i).where("rate = ?", ['$1.00'|| '$1.50'||'$2.00'||'$2.50'||'$3.00'||'$3.50'||'$4.00'||'$4.50'])
+        elsif params[:rate] == ["$5.00"]
+          @parking_meters  = ParkingMeter.near(params[:location], params[:distance].to_i).where("rate = ?", ['$1.00'|| '$1.50'||'$2.00'||'$2.50'||'$3.00'||'$3.50'||'$4.00'||'$4.50'||'$5.00'])
+        elsif params[:rate] == ["$5.50"]
+          @parking_meters  = ParkingMeter.near(params[:location], params[:distance].to_i).where("rate = ?", ['$1.00'|| '$1.50'||'$2.00'||'$2.50'||'$3.00'||'$3.50'||'$4.00'||'$4.50'||'$5.00'||'$5.50'])
+        elsif params[:rate] == ["$6.00"]
+          @parking_meters  = ParkingMeter.near(params[:location], params[:distance].to_i).where("rate = ?", ['$1.00'|| '$1.50'||'$2.00'||'$2.50'||'$3.00'||'$3.50'||'$4.00'||'$4.50'||'$5.00'||'$5.50'||'$6.00'])
+        else
+          redirect_to :parking_meters#index
+          return
+        end
       else
-        @parking_meters  = ParkingMeter.near(params[:location], 1)
+        if params[:rate] == ["any"]
+          @parking_meters  = ParkingMeter.near(params[:location], params[:distance], 1)
+        elsif params[:rate] == ["$1.00"]
+          @parking_meters  = ParkingMeter.near(params[:location], params[:distance], 1).where("rate = ?", ['$1.00'])
+        elsif params[:rate] == ["$1.50"]
+          @parking_meters  = ParkingMeter.near(params[:location], params[:distance], 1).where("rate = ?", ['$1.00'|| '$1.50'])
+        elsif params[:rate] == ["$2.00"]
+          @parking_meters  = ParkingMeter.near(params[:location], params[:distance], 1).where("rate = ?", ['$1.00'|| '$1.50'||'$2.00'])
+        elsif params[:rate] == ["$2.50"]
+          @parking_meters  = ParkingMeter.near(params[:location], params[:distance], 1).where("rate = ?",  ['$1.00'|| '$1.50'||'$2.00'||'$2.50'])
+        elsif params[:rate] == ["$3.00"]
+          @parking_meters  = ParkingMeter.near(params[:location], params[:distance], 1).where("rate = ?", ['$1.00'|| '$1.50'||'$2.00'||'$2.50'||'$3.00'])
+        elsif params[:rate] == ["$3.50"]
+          @parking_meters  = ParkingMeter.near(params[:location], params[:distance], 1).where("rate = ?", ['$1.00'|| '$1.50'||'$2.00'||'$2.50'||'$3.00'||'$3.50'])
+        elsif params[:rate] == ["$4.00"]
+          @parking_meters  = ParkingMeter.near(params[:location], params[:distance], 1).where("rate = ?", ['$1.00'|| '$1.50'||'$2.00'||'$2.50'||'$3.00'||'$3.50'||'$4.00'])
+        elsif params[:rate] == ["$4.50"]
+          @parking_meters  = ParkingMeter.near(params[:location], params[:distance], 1).where("rate = ?", ['$1.00'|| '$1.50'||'$2.00'||'$2.50'||'$3.00'||'$3.50'||'$4.00'||'$4.50'])
+        elsif params[:rate] == ["$5.00"]
+          @parking_meters  = ParkingMeter.near(params[:location], params[:distance], 1).where("rate = ?", ['$1.00'|| '$1.50'||'$2.00'||'$2.50'||'$3.00'||'$3.50'||'$4.00'||'$4.50'||'$5.00'])
+        elsif params[:rate] == ["$5.50"]
+          @parking_meters  = ParkingMeter.near(params[:location], params[:distance], 1).where("rate = ?", ['$1.00'|| '$1.50'||'$2.00'||'$2.50'||'$3.00'||'$3.50'||'$4.00'||'$4.50'||'$5.00'||'$5.50'])
+        elsif params[:rate] == ["$6.00"]
+          @parking_meters  = ParkingMeter.near(params[:location], params[:distance], 1).where("rate = ?", ['$1.00'|| '$1.50'||'$2.00'||'$2.50'||'$3.00'||'$3.50'||'$4.00'||'$4.50'||'$5.00'||'$5.50'||'$6.00'])
+        else
+          redirect_to :parking_meters#index
+          return
+        end
       end
 
       if @parking_meters.first===nil
