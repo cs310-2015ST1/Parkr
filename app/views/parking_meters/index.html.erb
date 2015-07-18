@@ -27,21 +27,18 @@
         <center>
           <form class="search-form">
           <%= form_tag parking_meters_path, method: :get do %>
-              <%= label :location, "Parking meters near:\n " %><br>
-              <%= text_field_tag :location, params[:location] %><br>
-              <br>
-              <%= label :distance, "Distance (km):\n " %><br>
-              <%= text_field_tag :distance, params[:distance] %><br>
-              <br>
-
-
-              <!-- TODO insert rate filter -->
-
-
-              <%= submit_tag "Search" %>
-
-              <%end%>
-            </form>
+                <%= label :location, "Parking meters near:\n " %><br>
+                <%= text_field_tag :location, params[:location] %><br>
+                <br>
+                <%= label :distance, "Distance (km):\n " %><br>
+                <%= text_field_tag :distance, params[:distance] %><br>
+                <br>
+                <%= label :rate, "Rate :" %>
+                <%=select :rate, params[:rate], ['any','$1.00','$1.50','$2.00','$2.50', '$3.00','$3.50','$4.00','$4.50','$5.00','$5.50','$6.00']%>
+                <br>
+                <%= submit_tag "Search" %>
+            <%end%>
+          </form>
         </center>
           <br>
 
